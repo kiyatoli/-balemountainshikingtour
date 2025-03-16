@@ -1,0 +1,1544 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  html,body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+  .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(105, 105, 105);
+    padding: 10px 0;
+    width: 100%;
+    color: red; /* Change text color for visibility */
+    z-index: 1000;
+}
+  .fa-regular {
+    margin-left: 30px;
+  }
+  .top p {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    margin-left: 10px; /* Set display to inline-block to allow the elements to appear next to each other */
+    line-height: 22px;
+  }
+  .top a {
+    color: #fff; /* Set the color to your preferred value */
+    text-decoration: none; /* Remove the underline */
+  }
+  .top p:hover{
+    color: #9c9c9c;
+  }
+  .top a:hover {
+    color: #9c9c9c; /* Set the hover color to your preferred value */
+  }
+  
+  .social-top {
+    margin-left: 950px;
+    float: right;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-right: 30px;
+  }
+  .social-top a {
+    color: #fff; /* Set the color to your preferred value */
+    text-decoration: none; /* Remove the underline */
+  }
+  .social-top a:hover {
+    color: #9c9c9c; /* Set the hover color to your preferred value */
+  }
+  .social-top i {
+    margin-right: 10px; /* Adjust the spacing between social icons */
+  }
+  header {
+    margin-top: 40px;
+    position: relative;
+    background-color: #d1d1d1;
+    padding: 4px; /* Reduced padding for a smaller header */
+    height: 80px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    margin-left: 150px;
+    width: 250px; 
+    line-height: 50%;
+    float: right;
+  
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-left:2px;
+    margin-right: 10px;
+  }
+  
+  .navbar ul {
+    font-size: 16px;
+    line-height: 50%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  .navbar a {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    color: #000000;
+    font-weight: 200;
+    text-decoration: none; /* Add this line to remove underline */
+  }
+  .navbar ul li a:hover {
+    background-color: hsla(0, 0%, 20%, 0.308);
+    color: #fff;
+  }
+
+
+
+  video {
+    width: 100%;
+    height: 630px;
+    object-fit: cover; /* Adjust as needed for your layout */
+  }
+
+main {
+    padding: 2em;
+}
+.about{
+    background-color:rgb(252, 249, 249);
+    position: relative;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.about .contentBx{
+     
+    max-width: 50%;
+    width: 50%;
+    text-align: left;
+    padding-right: 40px;
+  
+}
+
+.tours {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.tours h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tour-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.tour-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-info {
+    padding: 15px;
+}
+
+.tour-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.tour-info p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #777;
+}
+
+.tour-info span {
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Hero Text Section */
+
+#hero-text {
+  background-color: #ececec;
+    padding: 90px 50px;
+    text-align: center;
+   
+}
+
+#hero-text h1 {
+    
+    font-size: 2.5em;
+    color: #2a5d84;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-par {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.hero-par p {
+    margin-bottom: 20px;
+}
+
+.hero-par p span {
+    font-weight: bold;
+    color: #2a5d84;
+    text-decoration:none;
+    
+}
+.hero-par p a {
+  text-decoration: none;
+}
+
+/* History Section */
+.history-section {
+  background-color: #eeeeee;
+  padding: 40px 0;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* Optional: Covers full page height */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px;
+    
+}
+
+.image-container img {
+    margin-top: 120px;
+    max-width: 550px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 70px;
+}
+
+.text-container {
+    margin-top: 90px;
+    margin-left: 120px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.text-container h1 {
+    font-size: 2em;
+    color: #2a5d84;
+    margin-top: 50px;
+    margin-bottom: 20px;
+   
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+   
+}
+
+.text-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.text-container ul li {
+    margin-bottom: 10px;
+}
+.text-container li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.imgBx img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.titleText {
+  transition: color 0.3s ease-in-out;
+}
+/* Adjust list item (li) for consistent alignment */
+.contentBx ul li {
+  color: #cfcccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease;
+  border-bottom: 1px solid #ddd; /* Optional divider */
+  background-color: #333333; /* Neutral background for better visibility */
+  border-radius: 5px; /* Add subtle rounding for a modern look */
+  margin: 10px;
+}
+
+/* Hover effects for better interactivity */
+.contentBx ul li:hover {
+  background-color: #e0f7fa; /* Light blue for clear feedback */
+  color: #00796b; /* Complementary text color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Add a hover pointer indicator for links within list items */
+.contentBx ul li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contentBx ul li a:hover {
+  color: #004d40; /* Darker shade for hover feedback */
+  text-decoration: underline; /* Add underline for emphasis */
+}
+
+/* Optional: Add subtle focus effect for keyboard navigation */
+.contentBx ul li:focus {
+  outline: 2px solid #00796b; /* Highlight the focused item */
+  outline-offset: 2px;
+}
+
+/* Container for image and description */
+.imgBx {
+  width: 100%; /* Ensures it takes up full width of parent container */
+  max-width: 800px; /* Consistent width for images */
+  height: 400px; /* Fixed height for uniformity */
+  overflow: hidden; /* Prevents overflow of large images */
+  display: flex;
+  flex-direction: column; /* Stack image and description vertically */
+  justify-content: flex-start; /* Align items from the top */
+  align-items: center;
+  margin: 0 auto; /* Center align the image box */
+  text-align: center; /* Center all child elements */
+}
+
+/* Image styling for consistent sizing */
+.imgBx img {
+  width: 100%; /* Ensures image takes up the full width of the container */
+  height: 100%; /* Ensures the image takes up the full height of the container */
+  object-fit: cover; /* Ensures images fill the box proportionally */
+  transition: opacity 0.3s ease-in-out; /* Optional smooth transition effect */
+}
+
+/* Description styling */
+.image-description {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-top: 10px; /* Adjusted margin to avoid overlap with image */
+  margin-bottom: 10px;
+  text-align: center; /* Center the description text */
+}
+
+
+
+/* Title alignment and size */
+.titleText {
+  font-size: 2rem; /* Consistent title size */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2a5d84;
+  transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+/* Must-see Places in Ethiopia*/
+
+/* Must-see Places in Ethiopia */
+
+#Places {
+ margin-top: 600px;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  position: relative;
+  overflow: hidden;
+}
+
+#Places .container {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto; /* Center the container */
+  background: #f5f5f5;
+  box-shadow: 0 30px 50px #dbdbdb;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+#Places .container .slide .item {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+#Places .slide .item:nth-child(1),
+#Places .slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#Places .slide .item:nth-child(3) {
+  left: 50%;
+}
+#Places .slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+#Places .slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+#Places .slide .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+#Places .item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+}
+
+#Places .slide .item:nth-child(2) .content {
+  display: block;
+}
+
+#Places .content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+#Places .content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+#Places .content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+#Places .button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+#Places .button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+
+#Places .button button:hover {
+  background: #ababab;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*Bale Mountains National Park */
+  /* General Styling */
+ /* Section Styling */
+.destination-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/* Image Wrapper Styling */
+.image-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.destination-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Content Block Styling */
+.content-block {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    gap: 30px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.content-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.content-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Full Width Section Styling */
+.full-width-section {
+    padding: 60px 20px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.full-width-section.dark-bg {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.full-width-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/*Camping section*/
+#bale-mountains-camping {
+  padding: 40px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+#bale-mountains-camping h1 {
+  font-size: 2.5em;
+    color: #2a5d84;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#bale-mountains-camping .text-content {
+  text-align: justify;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+#bale-mountains-camping .text-content p {
+  margin-bottom: 20px;
+}
+#bale-mountains-camping .text-content p span {
+  font-weight: bold;
+  color: #2a5d84;
+}
+#bale-mountains-camping img {
+  width: 800px;
+}
+
+#bale-mountains-camping .image-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#bale-mountains-camping .destination-image {
+  width: 900px;
+  max-width: 900px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Section Styling */
+#campsites {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2a5d84;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Campsite Layout */
+.camp-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+/* Camp Box */
+.camp-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.camp-box:hover {
+  transform: scale(1.02);
+}
+
+.camp-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.camp-content {
+  width: 60%;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.camp-content h3 {
+  font-size: 1.5em;
+  color: #2a5d84;
+  margin-bottom: 10px;
+}
+
+.camp-content p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Hide/Reveal "See More" Feature */
+.full-text {
+  display: none;
+}
+
+.see-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #2a5d84;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.see-more-btn:hover {
+  background: #1f4d6b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .camp-container {
+      grid-template-columns: 1fr;
+  }
+
+  .camp-box {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .camp-image {
+      width: 100%;
+      height: auto;
+  }
+
+  .camp-content {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 15px;
+  }
+}
+
+
+.expandable-img {
+    width: 100%;
+    max-width: 300px; /* Default size */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.expandable-img.expanded {
+    max-width: 500px; /* Expanded size */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dinsho HQ Section 
+.dinsho-section {
+  padding: 60px 20px;
+  background-color: #e8f5e9; /* Light green background 
+}
+
+.dinsho-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.dinsho-text {
+  flex: 1;
+}
+
+.dinsho-title {
+  font-size: 2.2rem;
+  color: #1b5e20; /* Dark green 
+  margin-bottom: 20px;
+}
+
+.dinsho-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.dinsho-image {
+  flex: 1;
+}
+
+.dinsho-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Web Valley Section 
+.web-valley-section {
+  padding: 60px 20px;
+  background-color: #fff3e0; /* Light orange background 
+}
+
+.web-valley-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.web-valley-text {
+  flex: 1;
+}
+
+.web-valley-title {
+  font-size: 2.2rem;
+  color: #e65100; /* Dark orange 
+  margin-bottom: 20px;
+}
+
+.web-valley-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.web-valley-image {
+  flex: 1;
+}
+
+.web-valley-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Wasema and Rafu Campsite Section 
+.wasema-rafu-section {
+  padding: 60px 20px;
+  background-color: #e3f2fd; /* Light blue background 
+}
+
+.wasema-rafu-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.wasema-rafu-text {
+  flex: 1;
+}
+
+.wasema-rafu-title {
+  font-size: 2.2rem;
+  color: #0d47a1; /* Dark blue 
+  margin-bottom: 20px;
+}
+
+.wasema-rafu-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.wasema-rafu-image {
+  flex: 1;
+}
+
+.wasema-rafu-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Harenna Forest Section 
+.harenna-forest-section {
+  padding: 60px 20px;
+  background-color: #fce4ec; /* Light pink background 
+}
+
+.harenna-forest-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.harenna-forest-text {
+  flex: 1;
+}
+
+.harenna-forest-title {
+  font-size: 2.2rem;
+  color: #880e4f; /* Dark pink 
+  margin-bottom: 20px;
+}
+
+.harenna-forest-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.harenna-forest-image {
+  flex: 1;
+}
+
+.harenna-forest-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Harena Bamboo and Waterfall Trail Section 
+.harena-trail-section {
+  padding: 60px 20px;
+  background-color: #f0f4c3; /* Light lime background 
+}
+
+.harena-trail-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.harena-trail-text {
+  flex: 1;
+}
+
+.harena-trail-title {
+  font-size: 2.2rem;
+  color: #827717; /* Dark lime 
+  margin-bottom: 20px;
+}
+
+.harena-trail-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.harena-trail-image {
+  flex: 1;
+}
+
+.harena-trail-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Coffee Collector Section 
+.coffee-collector-section {
+  padding: 60px 20px;
+  background-color: #ffebee; /* Light red background
+}
+
+.coffee-collector-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.coffee-collector-text {
+  flex: 1;
+}
+
+.coffee-collector-title {
+  font-size: 2.2rem;
+  color: #c62828; /* Dark red 
+  margin-bottom: 20px;
+}
+
+.coffee-collector-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.coffee-collector-image {
+  flex: 1;
+}
+
+.coffee-collector-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Harvesting Honey Section 
+.honey-section {
+  padding: 60px 20px;
+  background-color: #fff8e1; /* Light yellow background 
+}
+
+.honey-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.honey-text {
+  flex: 1;
+}
+
+.honey-title {
+  font-size: 2.2rem;
+  color: #f9a825; /* Dark yellow 
+  margin-bottom: 20px;
+}
+
+.honey-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.honey-image {
+  flex: 1;
+}
+
+.honey-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+*/
+
+/* General Styles */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.options button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+  background-color: #2980b9;
+}
+
+.itinerary {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.itinerary p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.itinerary strong {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+
+/*COntact */
+/* Main Contact Container */
+.contact-container {
+  margin: 50px auto; /* Center the container horizontally */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left Side - Contact Form */
+.contact-form {
+  padding: 40px;
+  background: white;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto; /* Form fields stacked */
+  gap: 15px;
+}
+
+.contact-form h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Ensure Each Field is on Its Own Row */
+.contact-form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Send Button */
+.contact-form button {
+  padding: 12px;
+  background: #6aa84f;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: #5b9745;
+}
+
+/* Right Side - Contact Info */
+.contact-info {
+  padding: 40px;
+  background: #f9f9f9;
+  display: grid;
+  gap: 15px;
+  align-content: start;
+}
+
+.contact-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-info p {
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-info p strong {
+  font-weight: bold;
+  display: block;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.social-links img:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-container {
+      grid-template-columns: 1fr; /* Stack form and info on small screens */
+  }
+}
+
+footer {
+    background-image: url(images/image17.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000000;
+    padding: 5px 0 30px;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 50px;
+  }
+  footer p {
+   color: #fff;
+}
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .row {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  
+  }
+  
+  .col {
+    flex-basis:15%;
+    padding:10px;
+  }
+  .col:nth-child(2), .col:nth-child(3){
+    flex-basis:20%;
+  }
+  .logo1 {
+    width: 200px;
+    margin-bottom: 30px;
+  }
+  
+  .col h3 {
+    font-family:Poppins ;
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+  
+  }
+  .email-id {
+    width: fit-content;
+    border-bottom: 1px solid #000000;
+    margin: 20px 0;
+    margin-right: 10px;
+  }
+  .col ul li{
+    list-style: none;
+    margin-bottom:12px;
+  }
+  
+  .col ul a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .col a:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+  form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+  
+  }
+  form .fa-regular {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+  
+  }
+  form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+  form button .fa-solid{
+    font-size: 15px;
+    color: #ccc;
+  }
+  .social-icons {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .social-icons .fa-brands {
+    width: 30px;
+    height: 30px;
+    border-radius:40%;
+    line-height:30px;
+    font-size: 15px;
+    color: #181717;
+    background: #acacac;
+    margin-right: 25px;
+    cursor: pointer;
+  }
+  
+  hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+  
+  }
+  .copyright {
+    font-family: Poppins;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+
+  /*Bale Mountains National Park 
+  /* General Styling 
+.destination-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title Styling 
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Image Styling 
+.image-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.destination-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+/* Content Styling 
+.content-wrapper {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.content-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action Button Styling 
+.cta-wrapper {
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #e67e22;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d35400;
+}
+
+*/

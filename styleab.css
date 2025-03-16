@@ -1,0 +1,161 @@
+/* ====== Global Styles ====== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* ====== Two-Column Layout (Grid Fix) ====== */
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left = 2x bigger, Right = 1x */
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    align-items: start; /* Ensures sections align at the top */
+}
+
+/* ====== Left Section (Main Content) ====== */
+.left-section {
+    background: rgb(245, 244, 244); 
+    padding: 20px;
+    border-radius: 8px;
+    width: 800px;
+    margin-left: -50px;
+}
+
+/* ====== Right Section (Sidebar) ====== */
+.right-section {
+    background: rgb(245, 244, 244);
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content; /* Prevents sidebar from stretching */
+    width: 400px;
+    
+}
+
+/* ====== Image Gallery ====== */
+.gallery {
+    margin: 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 images per row */
+    gap: 10px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* ====== Features List ====== */
+.features ul {
+    margin-top: 50px;
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    padding: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.features i {
+    color: #2f9e5d;
+    margin-right: 10px;
+}
+
+/* ====== Description Section ====== */
+.description {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.description h2 {
+    font-size: 1.5em;
+    color: #2a5d84;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.description p {
+    margin-bottom: 20px;
+}
+/* ====== Booking Box ====== */
+.booking-box {
+  margin: 10px;
+    text-align: center;
+}
+
+.booking-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.book-btn {
+    background-color: #2f9e5d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    
+}
+
+/* ====== Add-ons Section ====== */
+.addons {
+    margin-top: 30px;
+}
+
+.addon-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.addon-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.addon-card p {
+
+}
+.addons a {
+    color: #333;
+    text-decoration: none;
+}
+.addons a:hover {
+    color: #3558ca;
+   
+}
+/* ====== Responsive Fixes ====== */
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .right-section {
+        width: 100%;
+    }
+}

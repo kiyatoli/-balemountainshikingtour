@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* 📌 Banner Section */
+.banner {
+    background: url('images/image1.jpg') no-repeat center center/cover;
+    height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    background-color: #2f9e5d;
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* 📌 Days Section */
+.days-section {
+    padding: 40px 15%;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+h1 {
+    
+        color: #ca9a14;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+}
+h2 {
+    color: #2f9e5d;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.days-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* 📌 Individual Day Styling */
+.day {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2f9e5d;
+    position: relative;
+}
+
+/* 📌 Numbered Circle */
+.day-number {
+    margin-right: 15px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0; /* 🚀 Prevents shrinking */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Day Content */
+.day-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 📌 Special Green Text */
+.full-day {
+    color: #2f9e5d;
+    font-weight: 600;
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 1024px) {
+    .days-section {
+        padding: 40px 10%;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .days-section {
+        padding: 20px;
+    }
+
+    .banner-content h1 {
+        font-size: 28px;
+    }
+
+    .day {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .day-number {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .day-content p {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Wrapper to center the container */
+.tour-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Grid Layout: 3 columns, handles odd numbers well */
+.tour-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 25px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Tour Card Styling */
+.tour-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Title */
+.tour-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 20px;
+    flex-grow: 1;
+}
+
+/* Info Section */
+.tour-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+.tour-info span {
+    display: flex;
+    align-items: center;
+}
+
+.tour-info i {
+    margin-right: 6px;
+    color: #2f9e5d;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .tour-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .tour-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
+/* Ensure Tour Title (h1) is Baseline Aligned */
+/* Center Tour Title (h1) */
+#tour3 h1 {
+    font-size: 1.5em; /* Smaller heading */
+    margin-top:15px;
+    text-align: center; /* Center the text */
+    display: block; /* Ensure full width */
+  margin-bottom: -25px;
+}
+/* Tour Card Adjustments */
+#tour3 .tour-card {
+    width: 220px; /* Make the card smaller */
+    max-width: 220px;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Reduce Image Size */
+#tour3 .tour-card img {
+    width: 100%;
+    height: 130px; /* Smaller image */
+    object-fit: cover;
+}
+
+/* Reduce Heading Size */
+#tour3 .tour-card h3 {
+    font-size: 14px;
+    padding: 5px;
+}
+
+/* Reduce Tour Info Font Size */
+#tour3 .tour-info {
+    font-size: 11px; /* Make text smaller */
+    padding: 6px;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 768px) {
+    #tour3 .tour-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tour3 .tour-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
