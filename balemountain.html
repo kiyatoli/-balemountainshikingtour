@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BALE MOUNTAINS HIKING TOURS</title>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@1,300&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+ <title>BALE MOUNTAINS HIKING TOURS</title>
+
+    <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -23,11 +41,9 @@
           <nav class="navbar">
             <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="ethiopia.html">Ethiopia</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="services.html">Services</a></li>
                 <li><a href="balemountain.html">Bale Mountains National Park</a></li>
+                <li><a href="tours.html">Tours</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <a href="index.html">
@@ -36,20 +52,16 @@
         </nav>
         </div>
       </header>
-    <main>
+      <section class="banner bale">
+        <div class="banner-content">
+            <h1>Camping and Trekking in the <br> Bale Mountains National Park</h1>
+            <p class="subtitle">Explore the stunning landscapes of the Bale Mountains.</p>
+        </div>
+    </section>
+    
      <!-- Unique Section with Image at Top -->
 <section class="destination-section">
   <div class="container">
-    <!-- Section Title -->
-    <h1 class="section-title">Camping and Trekking in the Bale Mountains National Park</h1>
-
-      <!-- Image Wrapper -->
-      <div class="image-wrapper">
-          <img src="images/image15.jpg" alt="Bale Mountains National Park" class="destination-image">
-          <p class="image-caption">Explore the stunning landscapes of the Bale Mountains.</p>
-      </div>
-
-      
       <!-- Content Block -->
       <div class="content-block">
           <div class="text-content">
@@ -182,7 +194,6 @@
 </section>
 
 
-    </main>
     <footer>
         <div class="container">
         <div class="row">
@@ -196,7 +207,7 @@
                 <h3>Contact us</h3>
                 <p><i class="fa-solid fa-location-dot"></i> BAle robe </p>
                 <p>Bale, Oromia, Ethiopia</p>
-                <p class="email-id"><i class="fa-solid fa-envelope"></i> aaaaa@gmail.com</p>
+                <p class="email-id"><i class="fa-solid fa-envelope"></i>balemountainshikingtours@gmail.com</p>
                 <h4><i class="fa-solid fa-phone"></i> +251 90 000 0000</h4>
               </div>
               <div class="col">
@@ -212,9 +223,8 @@
                 <ul>
                   <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
-                  <li><a href="tours.html">Tours</a></li>
-                  <li><a href="services.html">Services</a></li>
                   <li><a href="balemountain.html">Bale Mountains National Park</a></li>
+                  <li><a href="tours.html">Tours</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
@@ -231,30 +241,32 @@
                   <a href="https://twitter.com/yourhandle" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                   <a href="https://www.instagram.com/youraccount" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                   <a href="https://t.me/yourchannel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-              </div>        
+              </div>   
              </div>
             </div>
             </div>
           </div>
-          <hr>
-          <p class="copyright"> BALE C🧭MPASS TOURS <i class="fa-solid fa-copyright"></i> 2024- All Right Reserved</p>
+              
         </footer>
 
-        <script>
-          document.querySelectorAll('.see-more-btn').forEach(button => {
-              button.addEventListener('click', function () {
-                  let content = this.previousElementSibling;
-                  if (content.style.display === "none" || content.style.display === "") {
-                      content.style.display = "block";
-                      this.textContent = "See Less";
-                  } else {
-                      content.style.display = "none";
-                      this.textContent = "See More";
-                  }
-              });
-          });
-      </script>
-      
+       <script>
+  document.querySelectorAll('.see-more-btn').forEach(button => {
+      button.addEventListener('click', function () {
+          let content = this.previousElementSibling;
+          let image = this.closest('.camp-box').querySelector('.camp-image'); // Target the image in the same container
+
+          if (content.style.display === "none" || content.style.display === "") {
+              content.style.display = "block";
+              this.textContent = "See Less";
+              image.classList.add('expanded'); // Add class to expand the image
+          } else {
+              content.style.display = "none";
+              this.textContent = "See More";
+              image.classList.remove('expanded'); // Remove class to revert the image size
+          }
+      });
+  });
+</script>
 
 </body>
 </html>

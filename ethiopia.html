@@ -216,24 +216,22 @@
             </div>
             </div>
           </div>
-          <hr>
-          <p class="copyright"> BALE C🧭MPASS TOURS <i class="fa-solid fa-copyright"></i> 2024- All Right Reserved</p>
         </footer>
        <script>
         let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
+         let prev = document.querySelector('.prev')
 
-next.addEventListener('click', function(){
+       next.addEventListener('click', function(){
     let items = document.querySelectorAll('.item')
     document.querySelector('.slide').appendChild(items[0])
-})
+            })
 
-prev.addEventListener('click', function(){
+            prev.addEventListener('click', function(){
     let items = document.querySelectorAll('.item')
     document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
-})
+     })
        </script> 
-</body>
+    </body>
 </html>
 
     

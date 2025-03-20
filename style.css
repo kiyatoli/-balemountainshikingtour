@@ -1,21 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #f8f8f8;
-    color: #333;
-}
 
 /* 📌 Banner Section */
 .banner {
-    background: url('images/image1.jpg') no-repeat center center/cover;
+    background: url('images/footer.jpg') no-repeat center center/cover;
     height: 250px;
     position: relative;
     display: flex;
@@ -233,6 +222,7 @@ h2 {
 
 /* Ensure Tour Title (h1) is Baseline Aligned */
 /* Center Tour Title (h1) */
+
 #tour3 h1 {
     font-size: 1.5em; /* Smaller heading */
     margin-top:15px;
@@ -269,6 +259,56 @@ h2 {
     font-size: 11px; /* Make text smaller */
     padding: 6px;
 }
+/* Section Styles */
+section#tour3 {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+section#tour3 h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Tour Wrapper Styles */
+section#tour3 .tour-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Tour Container Styles (Grid Layout) */
+#tour3 .tour-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* space between cards */
+    width: 100%;
+    max-width: 1200px; /* Prevents cards from becoming too wide */
+    margin: 0 auto; /* Centers the container */
+}
+
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 1200px) {
+    section#tour3 .tour-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section#tour3 .tour-container {
+        grid-template-columns: 1fr; /* 1 card per row on mobile */
+    }
+}
+
+
+
+
+
+
+
+
 
 /* Responsive Fixes */
 @media screen and (max-width: 768px) {
@@ -281,4 +321,25 @@ h2 {
         width: 100%;
         max-width: 300px;
     }
+}
+
+.banner.bale {
+    background: url('images/image12.jpg') no-repeat center center/cover;
+    height:50vh; /* Makes the banner fill the viewport height */
+    color: #eee;
+    display: flex; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    position: relative;
+}
+.banner.tou {
+    background: url('images/footer.jpg') no-repeat center center/cover;
+    height:50vh; /* Makes the banner fill the viewport height */
+    color: #eee;
+    display: flex; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    position: relative;
 }

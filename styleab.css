@@ -18,8 +18,7 @@ body {
 }
 
 /* ====== Left Section (Main Content) ====== */
-.left-section {
-    background: rgb(245, 244, 244); 
+.left-section { 
     padding: 20px;
     border-radius: 8px;
     width: 800px;
@@ -28,11 +27,12 @@ body {
 
 /* ====== Right Section (Sidebar) ====== */
 .right-section {
-    background: rgb(245, 244, 244);
+    background: rgb(204, 204, 204);
     padding: 20px;
     border-radius: 8px;
     height: fit-content; /* Prevents sidebar from stretching */
     width: 400px;
+   
     
 }
 
@@ -134,9 +134,7 @@ body {
     height: 80px;
     border-radius: 5px;
 }
-.addon-card p {
 
-}
 .addons a {
     color: #333;
     text-decoration: none;
@@ -144,6 +142,18 @@ body {
 .addons a:hover {
     color: #3558ca;
    
+}
+.location {
+    background-color: #ececec;
+    margin-bottom: -50px
+    
+}
+
+.location iframe {
+    margin: 50px;
+    margin-left:150px;
+    width: 80%;  height: 470px;
+
 }
 /* ====== Responsive Fixes ====== */
 @media (max-width: 900px) {

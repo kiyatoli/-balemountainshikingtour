@@ -174,6 +174,7 @@ main {
     overflow: hidden;
     width: 300px;
     text-align: left;
+    margin: 5px;
 }
 
 .tour-card img {
@@ -244,29 +245,69 @@ main {
 .hero-par p a {
   text-decoration: none;
 }
+#extra-content h1 {
+ text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.see-moremore, #learn-less-container {
+  display: flex;
+  justify-content: center; /* Centering */
+  margin-top: 20px;
+}
+
+.see-more, .learn-less {
+  background-color: #2a5d84;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.see-more:hover, .learn-less:hover {
+  background-color: #1e4a6a;
+  transform: scale(1.05);
+}
+
+.see-more:active, .learn-less:active {
+  background-color: #153a52;
+  transform: scale(0.98);
+}
+
+
 
 /* History Section */
 .history-section {
   background-color: #eeeeee;
   padding: 40px 0;
-  position:absolute;
-  top: 0;
+  position:relative;
   left: 0;
   width: 100vw;
   height: auto; /* Optional: Covers full page height */
 }
 
 .content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 40px 20px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px 20px;
+  width: 80%;  /* Takes 80% of parent container */
+  max-width: 1200px; /* Prevents it from being too large */
+  min-height: 500px; /* Ensures a minimum height */
 }
 
+
 .image-container img {
-    margin-top: 120px;
     max-width: 500px;
     height: 650px;
     border-radius: 10px;
@@ -275,10 +316,9 @@ main {
 }
 
 .text-container {
-    margin-top: 90px;
     margin-left: 120px;
     flex: 1;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .text-container h1 {
@@ -728,7 +768,7 @@ main {
 #bale-mountains-camping {
   padding: 40px 20px;
   text-align: center;
-  background: #ffffff;
+  background: #f1f1f1;
 }
 
 #bale-mountains-camping h1 {
@@ -778,6 +818,7 @@ main {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
+ 
 }
 
 .section-title {
@@ -796,9 +837,19 @@ main {
 }
 
 /* Camp Box */
+/* Campsite Container - Grid Layout */
+.camp-container {
+  display: grid; /* Using grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Adds space between items */
+  margin-top: 20px;
+}
+
+/* Camp Box */
 .camp-box {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -810,15 +861,17 @@ main {
   transform: scale(1.02);
 }
 
+/* Image Styling */
 .camp-image {
-  width: 200px;
+  width: 200px; /* Adjust image width for better layout */
   height: 200px;
   border-radius: 10px;
   object-fit: cover;
 }
 
+/* Camp Content */
 .camp-content {
-  width: 60%;
+  width: 55%;
   padding-left: 15px;
   text-align: left;
 }
@@ -835,11 +888,12 @@ main {
   color: #444;
 }
 
-/* Hide/Reveal "See More" Feature */
+/* Hide the full text initially */
 .full-text {
   display: none;
 }
 
+/* See More Button */
 .see-more-btn {
   display: inline-block;
   margin-top: 10px;
@@ -857,29 +911,27 @@ main {
   background: #1f4d6b;
 }
 
-/* Responsive Design */
+/* Responsive Design - Stacks on Small Screens */
 @media (max-width: 1024px) {
   .camp-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stacks items on small screens */
   }
 
   .camp-box {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .camp-image {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .camp-content {
-      width: 100%;
-      padding-left: 0;
-      padding-top: 15px;
+    width: 100%;
+    padding: 15px 0;
   }
 }
-
 
 .expandable-img {
     width: 100%;
@@ -1346,15 +1398,24 @@ main {
 }
 
 footer {
-    background-image: url(images/image17.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #000000;
-    padding: 5px 0 30px;
-    font-size: 15px;
-    line-height: 25px;
-    margin-top: 50px;
-  }
+  background-image: url(images/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;  /* Covers entire footer while maintaining aspect ratio */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Optional: Makes the image stay fixed when scrolling */
+  color: #000000;
+  padding: 5px 0 30px;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: 50px;
+  width: 100%;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  min-height: 300px; /* Ensures the footer has enough height */
+}
+
+    
   footer p {
    color: #fff;
 }
@@ -1376,7 +1437,7 @@ footer {
   
   .col {
     flex-basis:15%;
-    padding:10px;
+    padding:8px;
   }
   .col:nth-child(2), .col:nth-child(3){
     flex-basis:20%;
@@ -1395,7 +1456,7 @@ footer {
   }
   .email-id {
     width: fit-content;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ffffff;
     margin: 20px 0;
     margin-right: 10px;
   }
@@ -1405,12 +1466,12 @@ footer {
   }
   
   .col ul a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
   }
   
   .col a:hover {
-    color: #000000;
+    color: #ffffff;
     text-decoration: underline;
   }
   form{
@@ -1425,6 +1486,7 @@ footer {
   form .fa-regular {
     font-size: 20px;
     margin-right: 10px;
+    color: #ffffff;
   }
   form input {
     width: 100%;
@@ -1454,7 +1516,7 @@ footer {
     border-radius:40%;
     line-height:30px;
     font-size: 15px;
-    color: #181717;
+    color: #2c2c2c;
     background: #acacac;
     margin-right: 25px;
     cursor: pointer;
@@ -1472,8 +1534,13 @@ footer {
     font-weight: 300;
     text-align: center;
   }
-  
-
+ .col img {
+  margin-top: -10px;
+  margin-left: -15px;
+ }
+.col form input {
+  color: #000;
+}
   /*Bale Mountains National Park 
   /* General Styling 
 .destination-section {
