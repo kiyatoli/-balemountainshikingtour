@@ -4,7 +4,7 @@
 
 /* 📌 Banner Section */
 .banner {
-    background: url('images/footer.jpg') no-repeat center center/cover;
+    background: url('images/new/Sanetti\ Plateau.jpg') no-repeat center center/cover;
     height: 250px;
     position: relative;
     display: flex;
@@ -324,7 +324,7 @@ section#tour3 .tour-wrapper {
 }
 
 .banner.bale {
-    background: url('images/image12.jpg') no-repeat center center/cover;
+    background: url('images/new/BaleMountain\ 11.jpg') no-repeat center center/cover;
     height:50vh; /* Makes the banner fill the viewport height */
     color: #eee;
     display: flex; /* Centers content vertically */
@@ -334,7 +334,7 @@ section#tour3 .tour-wrapper {
     position: relative;
 }
 .banner.tou {
-    background: url('images/footer.jpg') no-repeat center center/cover;
+    background: url('images/new/redwolf5.jpg') no-repeat center center/cover;
     height:50vh; /* Makes the banner fill the viewport height */
     color: #eee;
     display: flex; /* Centers content vertically */

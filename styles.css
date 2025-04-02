@@ -284,6 +284,46 @@ main {
 }
 
 
+#tours a {
+  text-decoration: none;
+  color: #111fe0;
+}
+
+#tours a:hover {
+  color: #ff6600; /* Change text color on hover */
+}
+
+#tours a:hover .tour-card {
+  transform: translateY(-5px); /* Moves the card slightly up */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  transition: 0.3s ease-in-out;
+}
+#tours a:hover .tour-card {
+  opacity: 0.8;
+}
+
+.image-wrapper {
+  position: relative;
+  margin: 0 auto 40px auto; /* Centers horizontally */
+  width: 90%; /* Increase the width */
+  max-width: 800px; /* Limit the max width */
+  text-align: center; /* Ensures text inside is centered */
+}
+
+.destination-image {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 400px; /* Reduces height slightly */
+  object-fit: cover; /* Ensures it fills the space properly */
+  display: block; /* Removes any extra spacing below the image */
+  margin: 0 auto; /* Ensures the image itself is centered */
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
 
 /* History Section */
 .history-section {
