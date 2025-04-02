@@ -22,6 +22,7 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
       <link rel="stylesheet" href="styles.css">
+      <script src="nav.js"></script>
 </head>
 <body>
     <div class="top">
@@ -36,17 +37,19 @@
     </div>
     <header>
         <div class="container">
-          <nav class="navbar">
+           <nav class="navbar">
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             <ul id="sidemenu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="balemountain.html">Bale Mountains National Park</a></li>
-              <li><a href="tours.html">Tours</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="balemountain.html">Bale Mountains National Park</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <a href="index.html">
-              <img src="images/logo.png" alt="logo" class="logo">
-          </a>
+                <img src="images/logo.png" alt="logo" class="logo">
+            </a>
         </nav>
         </div>
       </header>
@@ -54,41 +57,42 @@
   <div class="contact-container">
         <!-- Left Side: Contact Form -->
           <!-- Left Side - Contact Form -->
-          <div class="contact-form">
-              <h2>Send Us A Message</h2>
-      
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Enter your name">
-      
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Enter your email">
-      
-              <label for="message">Message</label>
-              <textarea id="message" placeholder="Enter your message"></textarea>
-      
-              <button type="submit">Send</button>
-          </div>
+          <form class="contact-form">
+            <h2>Send Us A Message</h2>
+          
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter your message" required></textarea>
+          
+            <button type="submit">Send</button>
+          </form>
+          
       
           <!-- Right Side - Contact Information -->
           <div class="contact-info">
               <h2>Get In Touch</h2>
-      
-              <p><strong>Address</strong> Bale, Oromia, Ethiopia</p>
-      
-              <p><strong>Email</strong><br>
-              balemountainshikingtours@gmail.com<br>
+       <p>main office Bale Mountains National park Oromia Region, Ethiopia</p>
+              <p><strong>Address</strong>  Bale, Dinsho Ethiopia</p>
+              <p><strong>P.O.box</strong>4540 Bale Robe, Ethiopia 🇪🇹</p>
+              <p><strong>Email Address</strong><br>
+                balehikingtours@gmail.com <br>
               <br>
               </p>
       
-              <p><strong>Phone</strong> +251000000</p>
-              <p><strong>WhatsApp</strong> +25191111111</p>
-      
+              <p><strong>Mobile</strong>+251(0)927073858</p>
+              <p><strong>WhatsApp/Telegram</strong> +251(0)912255644</p>
+             
               <p><strong>Follow Us</strong></p>
               <div class="social-icons">
                 <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://twitter.com/yourhandle" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/youraccount" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://t.me/yourchannel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+      
             </div> 
           </div>
       </div>
@@ -146,8 +150,9 @@
       </div>
       </div>
     </div>
-        
   </footer>
+  
+  
 
 </body>
 </html>

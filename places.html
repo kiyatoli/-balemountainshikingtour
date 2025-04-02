@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Must-See Places in Ethiopia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        .places-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #e74c3c, #f39c12);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .places-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .place-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .place-card:hover .place-image {
+            transform: scale(1.05);
+        }
+
+        .place-info {
+            padding: 20px;
+            position: relative;
+        }
+
+        .place-number {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            background: linear-gradient(135deg, #e74c3c, #f39c12);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .place-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            padding-top: 10px;
+        }
+
+        .place-description {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .learn-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: white;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .modal-info {
+            padding: 30px;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .modal-text {
+            line-height: 1.8;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .places-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .modal-content {
+                width: 95%;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .place-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .place-card:nth-child(1) { animation-delay: 0.1s; }
+        .place-card:nth-child(2) { animation-delay: 0.2s; }
+        .place-card:nth-child(3) { animation-delay: 0.3s; }
+        .place-card:nth-child(4) { animation-delay: 0.4s; }
+        .place-card:nth-child(5) { animation-delay: 0.5s; }
+        .place-card:nth-child(6) { animation-delay: 0.6s; }
+        .place-card:nth-child(7) { animation-delay: 0.7s; }
+        .place-card:nth-child(8) { animation-delay: 0.8s; }
+        .place-card:nth-child(9) { animation-delay: 0.9s; }
+    </style>
+</head>
+<body>
+    <section class="places-section">
+        <h2 class="section-title">Must-See Places in Ethiopia</h2>
+        <div class="places-container">
+            <!-- Place cards will be generated by JavaScript -->
+        </div>
+    </section>
+
+    <div class="modal" id="placeModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <p class="modal-text" id="modalText"></p>
+                <button class="learn-more">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const places = [
+            {
+                name: "Bale Mountains National Park",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "A stunning high-altitude national park with diverse wildlife including the Ethiopian wolf and mountain nyala."
+            },
+            {
+                name: "Lower Valley of Awash",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "A paleontological site where some of the most important hominid fossils have been discovered."
+            },
+            {
+                name: "Simien Mountains National Park",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "Dramatic mountain scenery with deep valleys and sharp precipices, home to rare species like the Gelada baboon."
+            },
+            {
+                name: "Konso Cultural Landscape",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "A spectacular example of a living cultural tradition with stone-walled terraces and fortified settlements."
+            },
+            {
+                name: "Tiya",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "An archaeological site containing 36 monuments including 32 carved stelae with mysterious symbols."
+            },
+            {
+                name: "Aksum",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "The heart of ancient Ethiopia with obelisks, royal tombs and ruins of castles dating back 2000 years."
+            },
+            {
+                name: "Harer Jugol",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "A fortified historic town with 82 mosques and 102 shrines, considered the fourth holiest city of Islam."
+            },
+            {
+                name: "Lower Valley of Omo",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "A prehistoric site near Lake Turkana where many fossil hominids have been discovered."
+            },
+            {
+                name: "Sofumer Cave",
+                image: "https://images.unsplash.com/photo-1581434681388-6b5b6b6b5b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                description: "An ancient cave with archaeological remains dating back to the Stone Age."
+            }
+        ];
+
+        const placesContainer = document.querySelector('.places-container');
+        const modal = document.getElementById('placeModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalText = document.getElementById('modalText');
+        const closeModal = document.getElementById('closeModal');
+
+        // Generate place cards
+        places.forEach((place, index) => {
+            const placeCard = document.createElement('div');
+            placeCard.className = 'place-card';
+            placeCard.innerHTML = `
+                <img class="place-image" src="${place.image}" alt="${place.name}">
+                <div class="place-info">
+                    <div class="place-number">${index + 1}</div>
+                    <h3 class="place-name">${place.name}</h3>
+                    <p class="place-description">${place.description}</p>
+                    <button class="learn-more">Learn More</button>
+                </div>
+            `;
+            placesContainer.appendChild(placeCard);
+
+            // Add click event to each card
+            placeCard.addEventListener('click', () => {
+                modalImage.src = place.image;
+                modalImage.alt = place.name;
+                modalTitle.textContent = place.name;
+                modalText.textContent = place.description;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

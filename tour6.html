@@ -23,6 +23,7 @@
     <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="style.css">
+      <script src="nav.js"></script>
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -38,24 +39,26 @@
     </div>
     <header>
         <div class="container">
-          <nav class="navbar">
-            <ul id="sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="balemountain.html">Bale Mountains National Park</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <a href="index.html">
-              <img src="images/logo.png" alt="logo" class="logo">
-          </a>
-        </nav>
+            <nav class="navbar">
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="balemountain.html">Bale Mountains National Park</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                </a>
+            </nav>
         </div>
       </header>
     <section class="banner">
         <div class="banner-content">
-            <h1>Six Days and <br> SIx Nights</h1>
-            <p class="subtitle">BALE MOUNTAINS TRAVEL</p>
+            <h1>Six Days and <br> Five Nights</h1>
+            <p class="subtitle">BALE MOUNTAINS HIKING</p>
         </div>
     </section>
 
@@ -65,10 +68,15 @@
             <div class="day">
                 <div class="day-number">1</div>
                 <div class="day-content">
-                    <p><strong>- Arrive in Addis Ababa.</strong></p>
-                    <p>Bole international airport,then to hotels and guest houses for
-                        overnight city activities. Getting tickets early,of bus or plane for the next day to Travel to the
-                        destination ,BMNP.</p>
+                    <p><strong>- Arrive to Bale Mountains.</strong></p>
+                    <p>On arrival at robe airport, will picked up by our team, then drive to Dinsho where the national
+                        park headquarter is located/ stop on way at the park's gate if you took bus from Addis Ababa.
+                        Afterward will start hiking by walking around the headquarter where you can spot some endemic
+                        endangered mammals such as mountain nyala, menelik's bushbuck, warthog, reedbuck,grey
+                        duicker and also variety bird species like black headed serien, wattled ibis , Abyssinian cat bird,
+                        wood owl, Abyssinian long eared owl , Abyssinian salty fly catcher which are endemic to
+                        Ethiopia and as well be found in juniper wood land of the national park HQ. Overnight at dinsho
+                        headquarter camp site at altitude 3100m.</p>
                    
                 </div>
             </div>
@@ -76,57 +84,57 @@
             <div class="day">
                 <div class="day-number">2</div>
                 <div class="day-content">
-                    <p><strong> Travel from Addis Ababa.</strong></p>
-                    <p>-Bale mountains national park by plane or bus. Travelling by
-                        bus it's journey of 400m through rift- valley and shashemene to DINSHO where the head quarter
-                        of the park located is approximately 5-7 hours. In the afternoon after the welcoming tea program
-                        we take a gentle very interesting walk around the head quarter and dinsho almost certainly
-                        encounter animals such as warthog,the endemic mammals ,menelik' bushbuck and mountain
-                        nyala and as well as variety of bird species and back for overnight at headquarter campsite</p>
+                    <p><strong> Dinsho Sodota 20km.</strong></p>
+                    <p>-Trekking from dinsho through the spectacular scenery of web valley towards the fincha habera
+                        waterfall where the web and walla rivers meet and we have our first chance to spot the endemic
+                        Ethiopian wolf, raptors, rodents, rock hyrax and endemic birds such as blue winged goose , black
+                        headed sisken and some prey birds species. This will surely leave you excited and all of the
+                        actual wilderness of Bake mountains on arrival at the campsite at altitude of 3520m a.s.l</p>
                 </div>
             </div>
 
             <div class="day">
                 <div class="day-number">3</div>
                 <div class="day-content">
-                    <p><strong>Dinsho Adele 16KM</strong></p>
-                    <p>Start hiking from dinsho to Adele campsite pass through gaysay grassland to see the antelope
-                        species such as mountain nyala, menelik's bush buck, olive baboon,behor reedbuck, serval cat
-                        and the variety bid species like Abyssinian long clow w/c endemic and then continue hiking
-                        through in the park's wood land parts up to the campsite. Overnight at adelay campsite at altitude
-                        3300m a.s.l.</p>
+                    <p><strong>Sodota - Wasema  18KM</strong></p>
+                    <p>Trek wassema through a beautiful landscape with stunning views and pass through marraro
+                        valley , where the lamergier and verrux's eagles, keep nests, there will also chance to see
+                        Ethiopian wolf, rock hyrax and numerous bird kite on the way. Overnight at wassema campsite
+                        at altitude of 3950 m a.s.l.
+                        </p>
                 </div>
             </div>
 
             <div class="day">
                 <div class="day-number">4</div>
                 <div class="day-content">
-                    <p><strong>ADELE TO SODOTA 18KM.</strong></p>
-                    <p>After breakfast heading to SODOTA across the heathland part of the national park and chance to
-                        see the rare and endangered canid species Ethiopian wolf and the endemic rodent species like
-                        gaint mole rat and the variety of bird species. Overnight at SODOTA campsite at altitude of
-                        3520m a.s.l.</p>
+                    <p><strong>Wesema - Sannettie 18KM.</strong></p>
+                    <p>Start hiking from wassema through largest afro Alpine the whole day where the you can see
+                        Ethiopian wolf, Ethiopian highland hare, rodent and raptors like birds of prey and beautiful afro
+                        Alpine moorland, wild Alpine scenery and lakes on the plateau. Overnight at sannetie campsite
+                        at altitude of 4128m a.s.l.</p>
                 </div>
             </div>
 
             <div class="day">
                 <div class="day-number">5</div>
                 <div class="day-content">
-                    <p><strong>DAY-5-sodota keyrensa 20km.</strong></p>
-                    <p>Continue hiking through majestic landscape to keyrensa and again we have very good chance to
-                        see spot a variety of bird species particularly raptors as well as Ethiopian wolf and Rock hyrax
-                        wich is very related to elephant species. Overnight to keyrensa campsite at altitude 3900m a.s.l.</p>
+                    <p><strong>Drive to Harena Forest 65 km.</strong></p>
+                    <p>After having breakfast you meet with the vehicles at the camp and drive towards harena forest
+                        and on the way there will a chance to see the rare and endangered canid species Ethiopian wolf,
+                        Abyssinian hare, water birds like blue winged goose, ruddy shell duck, wattled Crane and others.
+                        Then after take hike in the forest trail,in the bamboo forest to spot Bale monkey which is
+                        endemic and as well as forest hog, bush pig, colobus monkey and variety of bird species.then
+                        back to Goba the same day and spend the night there at hotel.</p>
                 </div>
             </div>
 
             <div class="day">
                 <div class="day-number">6</div>
                 <div class="day-content">
-                    <p><strong>Keyrensa -Rafu 20km.</strong></p>
-                    <p>Will be steep climbing up to the rafu campsite passing through by volcanic rock pillars near rafu
-                        from where we enjoy spectacular panaromic view and on the way we should see rock hyrax,bird
-                        of prey, klipspringer and other and other mammals like Ethiopian wolf and spend overnight at
-                        rafu campsite at altitude of 4050 a.s.l.
+                    <p><strong>Hotel - Airport.</strong></p>
+                    <p>From goba hotel to airport or bus station, take flight as per your program back to Addis
+                        Ababa 
                         </p>
                 </div>
             </div>
@@ -140,20 +148,20 @@
                 <!-- Card 1 -->
                 <a href="tour10.html" class="tour-card">
                     <img src="images/image1.jpg" alt="Wildlife Tour">
-                    <h3>10 DAYS BALE MOUNTAINS TREKKING</h3>
+                    <h3>10 DAYS AND 9 NIGHTS BALE MOUNTAINS HIKING</h3>
                     <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 15 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
+                        <span><i class="fas fa-clock"></i> Duration: 10 Days</span>
+                        <span><i class="fas fa-tags"></i> Category: HIKING</span>
                     </div>
                 </a>
     
                 <!-- Card 2 -->
                 <a href="tour5.html" class="tour-card">
                     <img src="images/image2.jpg" alt="Wildlife Tour">
-                    <h3>5 DAYS BALE MOUNTAINS TREKKING</h3>
+                    <h3>5 DAYS AND 4 NIGHTS BALE MOUNTAINS TREKKING</h3>
                     <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 13 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
+                        <span><i class="fas fa-clock"></i> Duration: 5 Days</span>
+                        <span><i class="fas fa-tags"></i> Category:  TREKKING</span>
                     </div>
                 </a>
     
@@ -162,18 +170,18 @@
                     <img src="images/image3.jpg" alt="Wildlife Tour">
                     <h3>4 DAYS BALE MOUNTAINS TREKKING</h3>
                     <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 8 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
+                        <span><i class="fas fa-clock"></i> Duration: 4 Days</span>
+                        <span><i class="fas fa-tags"></i> Category: TREKKING</span>
                     </div>
                 </a>
     
                 <!-- Card 4 -->
                 <a href="tour3.html" class="tour-card">
                     <img src="images/image4.jpg" alt="Wildlife Tour">
-                    <h3>3 DAYS and 2 Nights BALE MOUNTAINS TREKKING</h3>
+                    <h3>3 DAYS and 2 NIGHTS WILDLIFE TOURS</h3>
                     <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 7 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
+                        <span><i class="fas fa-clock"></i> Duration: 3 Days</span>
+                        <span><i class="fas fa-tags"></i> Category: WILDLIFE </span>
                     </div>
                 </a>
     

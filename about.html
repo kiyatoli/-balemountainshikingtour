@@ -15,6 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styleab.css">
+    <script src="nav.js"></script>
 </head>
 <body>
     <div class="top">
@@ -31,12 +32,14 @@
     <header>
         <div class="container">
             <nav class="navbar">
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 <ul id="sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="balemountain.html">Bale Mountains National Park</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="balemountain.html">Bale Mountains National Park</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <a href="index.html">
                     <img src="images/logo.png" alt="logo" class="logo">

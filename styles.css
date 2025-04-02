@@ -325,6 +325,217 @@ main {
   margin-top: 10px;
 }
 
+/*places to see*/
+.places-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.places-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+  gap: 30px;
+}
+
+.place-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.place-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.place-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.place-card:hover .place-image {
+  transform: scale(1.05);
+}
+
+.place-info {
+  padding: 20px;
+  position: relative;
+}
+
+.place-number {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  background: linear-gradient(135deg, #276b38, #5af500);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.place-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  padding-top: 10px;
+}
+
+.place-description {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: rgb(44, 42, 42);
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.modal.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.modal-info {
+  padding: 30px;
+}
+
+.modal-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.modal-text {
+  line-height: 1.8;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .places-container {
+      grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+      font-size: 2rem;
+  }
+  
+  .modal-content {
+      width: 95%;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.place-card {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.place-card:nth-child(1) { animation-delay: 0.1s; }
+.place-card:nth-child(2) { animation-delay: 0.2s; }
+.place-card:nth-child(3) { animation-delay: 0.3s; }
+.place-card:nth-child(4) { animation-delay: 0.4s; }
+.place-card:nth-child(5) { animation-delay: 0.5s; }
+.place-card:nth-child(6) { animation-delay: 0.6s; }
+.place-card:nth-child(7) { animation-delay: 0.7s; }
+.place-card:nth-child(8) { animation-delay: 0.8s; }
+.place-card:nth-child(9) { animation-delay: 0.9s; }
+
+
+
+
+
+
+
+
+
+
 /* History Section */
 .history-section {
   background-color: #eeeeee;
@@ -1476,7 +1687,7 @@ footer {
   }
   
   .col {
-    flex-basis:15%;
+    flex-basis:12%;
     padding:8px;
   }
   .col:nth-child(2), .col:nth-child(3){
@@ -1661,3 +1872,233 @@ footer {
 }
 
 */
+
+/*NAvigation bar moblie */
+  /* Mobile Menu Styles */
+  .fa-bars, .fa-xmark {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: #333;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    /* Hide both icons by default */
+    .fa-bars, .fa-xmark {
+        display: none;
+        z-index: 1001;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    /* Show only the bars icon when menu is closed */
+    .menu-closed .fa-bars {
+        display: block;
+    }
+    
+    /* Show only the xmark icon when menu is open */
+    .menu-open .fa-xmark {
+        display: block;
+    }
+    
+    #sidemenu {
+        position: fixed;
+        top: 120px;
+        left: -270px;
+        width: 250px;
+        height: calc(100vh - 70px);
+        background-color: #ffffffb2;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        transition: left 0.3s ease;
+        z-index: 1000;
+        border-radius: 0 8px 8px 0;
+       
+        gap: 15px;
+    }
+    
+    #sidemenu.active {
+        left: 0;
+    }
+    
+    #sidemenu li a {
+        padding: 8px 0;
+        display: block;
+        border-bottom: 1px solid #f0f0f0; /* Separator between items */
+    }
+    #sidemenu li a {
+    white-space: nowrap; /* Keep text on one line */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ... for overflow */
+    display: block;
+    max-width: 100%;
+}
+    #sidemenu li:last-child a {
+        border-bottom: none; /* Remove border from last item */
+    }
+    
+    .navbar {
+        padding: 10px 15px;
+        position: relative;
+        z-index: 1002; /* Ensure navbar stays above menu */
+        
+    }
+    
+    /* Optional: Add backdrop effect when menu is open */
+    .menu-backdrop {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        z-index: 999;
+        display: none;
+    }
+    
+    .menu-backdrop.active {
+        display: block;
+    }
+
+
+    /*Tours width*/
+    .tour-wrapper {
+      margin-left: 57px;
+    }
+
+    /*tours numbers h1*/
+    .tour-wrapper a {
+      margin-left: -27px;
+     
+    }
+
+    /*DEstionation bale mounations*/
+    .destination-section {
+      padding: 40px 15px;
+  }
+
+  .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+  }
+
+  .content-block {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .reverse {
+      flex-direction: column;
+  }
+
+  .content-title {
+      font-size: 1.5rem;
+  }
+
+  .content-description {
+      font-size: 1rem;
+  }
+
+  .destination-image,
+  .content-image {
+      max-width: 100%;
+  }
+
+  .full-width-text {
+      text-align: center;
+  }
+
+  #bale-mountains-camping h1 {
+      font-size: 2rem;
+  }
+
+  #bale-mountains-camping .text-content {
+      font-size: 0.95em;
+      max-width: 100%;
+      text-align: justify;
+  }
+
+  #bale-mountains-camping img,
+  #bale-mountains-camping .destination-image {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  /*Footer for mobile*/
+  footer {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 20px 0;
+    min-height: auto;
+}
+
+.container {
+    width: 95%;
+    margin-top: 30px;
+}
+
+.row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.col {
+    flex-basis: 100%;
+    padding: 15px 0;
+}
+
+.col:nth-child(2), .col:nth-child(3) {
+    flex-basis: 100%;
+}
+
+.logo1 {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.col h3 {
+    margin-bottom: 20px;
+}
+
+.email-id {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+}
+
+form {
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+
+form input {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    margin-right: 15px;
+}
+
+hr {
+    width: 100%;
+}
+
+.copyright {
+    font-size: 14px;
+}
+}
