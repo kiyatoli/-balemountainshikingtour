@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
+    overflow-x: hidden;
   }
   .top {
     position: absolute;
@@ -1552,7 +1553,7 @@ main {
 
 /* Left Side - Contact Form */
 .contact-form {
-  padding: 40px;
+  padding: 50px;
   background: white;
   display: grid;
   grid-template-rows: auto auto auto auto auto; /* Form fields stacked */
@@ -1568,6 +1569,9 @@ main {
 .contact-form label {
   font-size: 14px;
   font-weight: bold;
+  width: 280px; /* Adjust this value as needed */
+  display: inline-block; /* Ensures the width is applied properly */
+  
 }
 
 .contact-form input,
@@ -1640,7 +1644,19 @@ main {
 .social-links img:hover {
   opacity: 1;
 }
+#form-message {
+  display: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background: #dff0d8;
+  color: #3c763d;
+}
 
+#form-message.error {
+  background: #f2dede;
+  color: #a94442;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .contact-container {
@@ -1872,7 +1888,29 @@ footer {
 }
 
 */
+.social-icons {
+  margin-top: 10px;
+  text-align: center;
+  display: flex; /* Added to enforce horizontal layout */
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center; /* Aligns icons vertically in the middle */
+  flex-wrap: nowrap; /* Prevents wrapping to new line */
+  gap: 15px; /* Replaces margin-right for consistent spacing */
+}
 
+.social-icons .fa-brands {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  font-size: 13px;
+  color: #2c2c2c;
+  background: #acacac;
+  cursor: pointer;
+  display: flex; /* Added to center the icon within its container */
+  justify-content: center; /* Centers icon horizontally */
+  align-items: center; /* Centers icon vertically */
+}
 /*NAvigation bar moblie */
   /* Mobile Menu Styles */
   .fa-bars, .fa-xmark {
@@ -1966,14 +2004,15 @@ footer {
     /*Tours width*/
     .tour-wrapper {
       margin-left: 57px;
+
     }
 
     /*tours numbers h1*/
     .tour-wrapper a {
-      margin-left: -27px;
+      margin-left: -45px;
      
     }
-
+    
     /*DEstionation bale mounations*/
     .destination-section {
       padding: 40px 15px;
@@ -2027,78 +2066,237 @@ footer {
   }
 
   /*Footer for mobile*/
-  footer {
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    padding: 20px 0;
-    min-height: auto;
+ /* Mobile Footer Styles */
+ footer {
+  background-image: url(images/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #000000;
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 30px;
+  width: 100%;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  min-height: 200px;
+}
+
+footer p {
+  color: #fff;
 }
 
 .container {
-    width: 95%;
-    margin-top: 30px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .col {
-    flex-basis: 100%;
-    padding: 15px 0;
+  flex-basis: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
 }
 
 .col:nth-child(2), .col:nth-child(3) {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .logo1 {
-    width: 150px;
-    margin-bottom: 20px;
+  width: 150px;
+  margin-bottom: 15px;
 }
 
 .col h3 {
-    margin-bottom: 20px;
+  font-family: Poppins;
+  width: fit-content;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .email-id {
-    display: block;
-    margin: 15px auto;
-    text-align: center;
+  width: fit-content;
+  border-bottom: 1px solid #ffffff;
+  margin: 10px 0;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.col ul a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.col a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 form {
-    flex-direction: column;
-    align-items: center;
-    border-bottom: none;
-    margin-bottom: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+form .fa-regular {
+  font-size: 18px; /* Icon preserved and sized for mobile */
+  margin-right: 8px;
+  color: #ffffff;
 }
 
 form input {
-    width: 90%;
-    margin-bottom: 10px;
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form button .fa-solid {
+  font-size: 14px; /* Icon preserved and sized for mobile */
+  color: #ccc;
 }
 
 .social-icons {
-    margin-top: 10px;
+  margin-top: 10px;
+  text-align: center;
+  display: flex; /* Added to enforce horizontal layout */
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center; /* Aligns icons vertically in the middle */
+  flex-wrap: nowrap; /* Prevents wrapping to new line */
+  gap: 15px; /* Replaces margin-right for consistent spacing */
 }
 
 .social-icons .fa-brands {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    line-height: 40px;
-    margin-right: 15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  font-size: 13px;
+  color: #2c2c2c;
+  background: #acacac;
+  cursor: pointer;
+  display: flex; /* Added to center the icon within its container */
+  justify-content: center; /* Centers icon horizontally */
+  align-items: center; /* Centers icon vertically */
 }
-
 hr {
-    width: 100%;
+  width: 95%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 15px auto;
 }
 
 .copyright {
-    font-size: 14px;
+  font-family: Poppins;
+  font-weight: 300;
+  text-align: center;
+  font-size: 12px;
 }
+
+.col img {
+  margin-top: -5px;
+  margin-left: -10px;
+}
+
+.col form input {
+  color: #000;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  footer {
+    background-attachment: scroll;
+  }
+  
+  .container {
+    width: 90%;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+}}
+/* Tablet Devices (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  footer {
+    background-attachment: fixed;
+    padding: 25px 0;
+    min-height: 250px;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .logo1 {
+    width: 180px;
+  }
+
+  form .fa-regular {
+    font-size: 20px;
+  }
+
+  form button .fa-solid {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    margin-left: 50px;
+    display: flex; /* Explicitly horizontal */
+    flex-direction: row; /* Force horizontal layout */
+    justify-content: center; /* Center icons */
+    align-items: center; /* Vertical alignment */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px; /* Consistent spacing */
+    width: 100%; /* Ensure full width available */
+  }
+
+  .social-icons .fa-brands {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+  .col input {
+    width: 150px;
+  }
 }
