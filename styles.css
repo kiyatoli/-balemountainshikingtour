@@ -122,8 +122,17 @@
   video {
     width: 100%;
     height: 630px;
-    object-fit: cover; /* Adjust as needed for your layout */
+    object-fit: cover;
   }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    video {
+      height: 300px; /* Adjust height for smaller screens */
+      object-fit: cover;
+    }
+  }
+  
 
 main {
     padding: 2em;
@@ -221,6 +230,13 @@ main {
     color: #2a5d84;
     margin-bottom: 20px;
     font-weight: bold;
+}
+@media (max-width: 768px) {
+  #hero-text h1 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+  }
 }
 
 .hero-par {
@@ -529,6 +545,492 @@ main {
 .place-card:nth-child(9) { animation-delay: 0.9s; }
 
 
+
+#about-us {
+  background-color: #eeeeee;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.about-us-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-us-text h2 {
+  color: #335b1f;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.about-us-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-us-images {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex: 1;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.about-us-image {
+  width: 150px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transform: rotate(2deg);
+}
+
+.image-one {
+  background-image: url('images/image11.jpg');
+  background-position: top left;
+}
+
+.image-two {
+  background-image: url('images/image12.jpg');
+  background-position: center center;
+}
+
+.image-three {
+  background-image: url('images/image14.jpeg');
+  background-position: right bottom;
+}
+
+
+
+ #services {
+     background-color: #ffffff;
+      padding: 40px 20px;
+      width: 100%;
+      margin: auto;
+    }
+
+    #services .services-header {
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    #services .services-header h2 {
+      margin-left: 150px;
+      color: #2d5c1d;
+      font-size: 28px;
+    }
+
+    #services .btn-view-all {
+      background-color: #2d5c1d;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #services .services-grid {
+      margin-left: 180px;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    #services .service-card {
+      background-color: #ccc4b8;
+      border-radius: 15px;
+      padding: 20px;
+      position: relative;
+      padding-top: 70px;
+      min-height: 200px;
+    }
+
+    #services .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #111;
+    }
+
+    #services .service-card p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    #services .service-card a {
+      font-weight: bold;
+      color: #2d5c1d;
+      text-decoration: none;
+    }
+
+    /* Icons Placeholder (Can Replace with Real Icons) */
+    #guiding-service::before,
+    #entrance-fee::before,
+    #field-gear::before,
+    #accommodation::before,
+    #transportation::before,
+    #cooking-service::before,
+    #horses::before,
+    #horse-assistant::before,
+    #all-meals::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border: 2px solid #2d5c1d;
+      border-radius: 50%;
+    }
+
+    #more-services {
+      display: none;
+    }
+
+    #more-services.show {
+      display: contents; /* allows children to fit into grid */
+    }
+    .service-card .icon-circle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border: 2px solid #2d5c1d;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     
+    }
+    
+    .service-card .icon-circle i {
+      font-size: 18px;
+      color: #2d5c1d;
+    }
+    
+
+    @media (max-width: 768px) {
+      #services .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+     
+      #services h3 {
+       
+        margin-top: 50px;
+      }
+      .services-header h2 {
+        margin-left: 50px;
+      }
+    }
+
+    .service-card i {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 8px;
+      display: block;
+    }
+    
+  .services-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.services-container {
+  margin:auto;
+  max-width: 1000px;
+  padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Keeps them from stacking */
+}
+
+.service-item {
+    width: 30%; /* Adjust this value as needed */
+    background-color: #ccc4b8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+.services-section h2 {
+  
+      color: #ca2f00;
+      font-size: 28px;
+      margin-left:160px;
+      margin-top:15px ;
+}
+.service-item h3 {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #111;
+}
+
+.service-item p {
+      font-size: 14px;
+      color: #333;
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .services-container {
+      width: 90%;  /* Increase width for mobile */
+      flex-direction: column; /* Stack the items vertically */
+      align-items: center; /* Center items */
+  }
+
+  .service-item {
+      width: 80%; /* Make each item take up more space on mobile */
+      margin: 10px 0; /* Adjust margin for stacking */
+  }
+
+  .services-section h2 {
+     margin-left: -10px;
+  }
+}
+
+/* Additional smaller screen styles */
+@media (max-width: 480px) {
+  .service-item {
+      width: 90%; /* Make each item even bigger on very small screens */
+  }
+
+  .services-section h2 {
+      font-size: 24px; /* Make heading slightly smaller on very small screens */
+  }
+}
+
+
+
+#journey {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #e9e9e9;
+  margin-bottom: -50px ;
+}
+
+#journey .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#journey .gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#journey  .gallery-header h2 {
+  font-size: 28px;
+  color: #347a2a;
+  font-weight: bold;
+  margin: 0;
+}
+
+#journey  .gallery-header p {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+
+}
+
+#journey  .nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#journey .nav-buttons button {
+  background-color: #347a2a;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#journey .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+#journey a {
+    text-decoration: none;
+}
+#journey h4 {
+    color: rgb(245, 139, 0);
+}
+#journey .gallery-item {
+  background-color: #a49f91;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+
+#journey  .contact-text {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#journey  .book-button {
+display: inline-block;
+background-color: #347a2a;
+color: white;
+padding: 6px 16px;
+font-size: 16px;
+border-radius: 8px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+#journey .book-button:hover {
+background-color: #2a601f;
+}
+@media (max-width: 768px) {
+  /* SERVICES section (already good) */
+  #services {
+    padding: 30px 10px;
+  }
+
+  #services .services-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #services .services-header h2 {
+    margin-left: 0;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  #services .btn-view-all {
+    align-self: flex-end;
+  }
+
+  #services .services-grid {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  #services .service-card {
+    padding: 20px 15px 15px 15px;
+  }
+
+  #guiding-service::before,
+  #entrance-fee::before,
+  #field-gear::before,
+  #accommodation::before,
+  #transportation::before,
+  #cooking-service::before,
+  #horses::before,
+  #horse-assistant::before,
+  #all-meals::before {
+    top: 15px;
+    left: 15px;
+  }
+
+  /* JOURNEY section responsiveness */
+  #journey {
+    padding: 30px 10px;
+  }
+
+  #journey .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+  }
+
+  #journey .gallery-header h2 {
+    font-size: 24px;
+  }
+
+  #journey .gallery-header p {
+    font-size: 16px;
+  }
+
+  #journey .nav-buttons {
+    justify-content: flex-start;
+  }
+
+  #journey .nav-buttons button {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  #journey .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item1, .item2, .item3, .item4, .item5, .item6, .item7 {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+  }
+
+  #journey .gallery-item {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #journey .contact-text {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  #journey .book-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
 
 
 

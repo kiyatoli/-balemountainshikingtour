@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@1,300&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+ <title>BALE MOUNTAINS HIKING TOURS</title>
+
+    <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="styles.css">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</head>
+<body>
+        <style>
+
+        /* Main Content */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .about-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 34px;
+            font-weight: 600;
+            color: #1a3c34;
+            position: relative;
+        }
+
+        .about-section h2::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: #e67e22;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .about-content .image-container {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .about-content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            border: 5px solid #e67e22;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .about-content img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-content .text-container {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-content p {
+            font-size: 17px;
+            line-height: 30px;
+            text-align: justify;
+            color: #4a4a4a;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f1f3f5 100%);
+            border-radius: 20px;
+            margin: 40px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-section h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #1a3c34;
+            position: relative;
+        }
+
+        .contact-section h2::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: #e67e22;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .contact-section p {
+            font-size: 17px;
+            margin-bottom: 30px;
+            color: #4a4a4a;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .contact-section ul li {
+            font-size: 16px;
+            background: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-section ul li:hover {
+            background: #e67e22;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 50px 20px;
+            background: #fff;
+            border-radius: 20px;
+            margin: 40px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 600;
+            color: #1a3c34;
+            position: relative;
+        }
+
+        .services-section h2::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: #e67e22;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .services-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .services-section ul li {
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            position: relative;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            flex: 1 1 280px;
+        }
+
+        .services-section ul li:hover {
+            background: #e67e22;
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-section ul li:before {
+            content: "✔";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            color: #e67e22;
+            font-size: 18px;
+        }
+
+        .services-section ul li:hover:before {
+            color: #fff;
+        }
+
+        /* Mobile Devices (up to 768px) */
+        @media screen and (max-width: 768px) {
+            .about-section {
+                padding: 40px 15px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .about-section h2 {
+                font-size: 26px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .about-content img {
+                max-width: 300px;
+            }
+
+            .about-content p {
+                font-size: 15px;
+                line-height: 26px;
+            }
+
+            .contact-section {
+                padding: 30px 15px;
+                margin: 20px 10px;
+            }
+
+            .contact-section h2 {
+                font-size: 24px;
+            }
+
+            .contact-section p {
+                font-size: 15px;
+            }
+
+            .contact-section ul li {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .services-section {
+                padding: 30px 15px;
+                margin: 20px 10px;
+            }
+
+            .services-section h2 {
+                font-size: 24px;
+            }
+
+            .services-section ul li {
+                font-size: 14px;
+                flex: 1 1 100%;
+            }
+        }
+
+        /* Tablet Devices (769px to 1024px) */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .about-section {
+                padding: 50px 20px;
+            }
+
+            .about-section h2 {
+                font-size: 30px;
+            }
+
+            .about-content {
+                flex-direction: row;
+            }
+
+            .about-content img {
+                max-width: 350px;
+            }
+
+            .about-content p {
+                font-size: 16px;
+            }
+
+            .contact-section {
+                padding: 40px 20px;
+            }
+
+            .contact-section h2 {
+                font-size: 28px;
+            }
+
+            .contact-section p {
+                font-size: 16px;
+            }
+
+            .contact-section ul li {
+                font-size: 15px;
+            }
+
+            .services-section {
+                padding: 40px 20px;
+            }
+
+            .services-section h2 {
+                font-size: 28px;
+            }
+
+            .services-section ul li {
+                font-size: 15px;
+                flex: 1 1 45%;
+            }
+        }
+    </style>
+<header>
+    <div class="container">
+      <nav class="navbar">
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="balemountain.html">Bale Mountains National Park</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo" class="logo">
+        </a>
+    </nav>
+    </div>
+  </header>
+    <section class="about-section">
+        <h2>ABOUT THE FOUNDER</h2>
+        <div class="about-content">
+            <div class="image-container">
+                <img src="abubeker.jpg" alt="Abubeker Adem at a waterfall">
+            </div>
+            <div class="text-container">
+                <p>Hello, my name is Abubeker Adem, and I'm the founder of Bale Mountains Hiking Tour. I was born and live in the small town of Dinsho, where the headquarters of the park is located. Being born and living in the wilderness and interacting with it in every daily action can make anyone fall in love with it. My main objective in starting this company was to promote local tourism and introduce more people to the beauty of Bale Mountains National Park and Ethiopia as a whole. I want to provide clients with a better level of service and an overall unforgettable experience. I believe that through this, I can help make Ethiopia a world-class tourist destination. I have been working in tourism services and as a tourist guide in Bale Mountains and throughout Ethiopia for 18 years, as well as with botanical researchers who need plant identification for more than ten years. I have worked with students from higher education institutions in the countryside, as well as from various international diversities and research centers, concerning the investigation of plant types and identifications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Us for Special Types of Trips</h2>
+        <p>Kindly send us a message for more information through our contacts with a very attractive or reasonable price. We also appreciate discussions, and our services that we are offering are:</p>
+        <ul>
+            <li>Trekking Full Packages</li>
+            <li>Adventure Tours</li>
+            <li>Bird Watching Tours</li>
+            <li>Family Package</li>
+            <li>Group Package</li>
+            <li>Solo Joiners</li>
+            <li>Couple Package</li>
+            <li>Exclusive Tour</li>
+            <li>Cultural Tours</li>
+            <li>Historical Tour</li>
+            <li>Fauna and Flora Tour</li>
+            <li>Botanical Identification Service for Researchers</li>
+        </ul>
+    </section>
+
+    <section class="services-section">
+        <h2>Services</h2>
+        <ul>
+            <li>Guiding Service Fee</li>
+            <li>Entrance Fee</li>
+            <li>Field Gear</li>
+            <li>Hotel/Accommodations</li>
+            <li>Car with Driver & Fuel</li>
+            <li>Cook with Cooking Materials</li>
+            <li>Horses for Packing and Riding</li>
+            <li>Horse Assistant</li>
+            <li>All Meals</li>
+        </ul>
+        <h2>Services Not Included</h2>
+        <ul>
+            <li>Tips</li>
+            <li>Miscellaneous Expenses - Alcohol Drinks, etc.</li>
+            <li>All Services Which Are Not Mentioned in Services We Give Are Not Included</li>
+        </ul>
+    </section>
+    <footer>
+        <div class="container">
+        <div class="row">
+              <div class="col">
+                <a href="index.html">
+                  <img src="images/logo.png" alt="logo1" class="logo1">
+                </a>
+                <p>Bale compass tour is based in Bale Mountains National park </p>
+              </div>
+              <div class="col">
+                <h3>Contact us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> BAle robe </p>
+                <p>Bale, Oromia, Ethiopia</p>
+                <p class="email-id"><i class="fa-solid fa-envelope"></i>balehikingtours@gmail.com</p>
+                <h4><i class="fa-solid fa-phone"></i> +251(0) 912 255 644 </h4>
+              </div>
+              <div class="col">
+                <h3>Attractions</h3>
+                <ul>
+                  <li><a href="#">Bale Mountains National Park</a></li>
+                  <li><a href="#">Ethiopian Wolf</a></li>
+                  <li><a href="#">The sof Omor cave </a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>Links</h3>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="balemountain.html">Bale Mountains National Park</a></li>
+                  <li><a href="tours.html">Tours</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div>
+                <div class="col">
+                <h3>Newsletter</h3>
+                <form>
+                  <i class="fa-regular fa-envelope"></i>
+                 <input type="email" placeholder="Enter your email-id" required>
+                 <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://twitter.com/yourhandle" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.instagram.com/youraccount" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://t.me/yourchannel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+              </div>   
+             </div>
+            </div>
+            </div>
+          </div>
+              
+        </footer>
+</body>
+</html>

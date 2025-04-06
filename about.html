@@ -12,12 +12,17 @@
     <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Add this to your <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styleab.css">
+   <!-- <link rel="stylesheet" href="styleab.css"> -->
     <script src="nav.js"></script>
 </head>
 <body>
+   
     <div class="top">
         <a href="mailto:kiyatoliabdu@gmail.com"><i class="fa-regular fa-envelope"></i></a>
         <p><a href="mailto:kiyatoliabdu@gmail.com">kiyatoliabdu@gmail.com</a></p>
@@ -49,75 +54,140 @@
     </header>
 
     <!-- Main Content Section -->
-        <section class="about-container">
-            <!-- Left Section -->
-            <div class="left-section">
-                <h1>Blogs</h1>
-                
-                <!-- Image Gallery -->
-                <div class="gallery">
-                    <img src="images/image1.jpg" alt="Tent">
-                    <img src="images/image11.jpg" alt="Tent">
-                    <img src="images/image13.jpg" alt="Tent">
-                    <img src="images/image14.jpeg" alt="Tent">
-                </div>
+    <section id="about-us">
+        <div class="about-us-container">
+          <div class="about-us-text">
+            <h2>ABOUT US</h2>
+            <p>
+                Hello my name is Abubeker Adem and I'm the founder of bale mountains hiking tour. I was born and live in small town  DINSHO,  where the Head quarter of the park suited. Being born and live in wilderness and interracting with it in every day action can make anyone fall in love with it.
+                My main objective is starting this company was to promote local tourism and introduce more people to the beauty of bale mountains national park and Ethiopia as a whole. I want to provide clients with a better level of service and an overall unforgettable experience.i believe that through this,
+                I can help make Ethiopia world class tourist destination. I have been working on tourism service and tourist guide in bale mountains and in whole Ethiopian country for 18 years and as well as in botanical researchers those needs to plant identification more than ten years. With those students from higher education institution in the country side as well as from different corners of abroad diversities and research centers concerning investigation of plant types and identifications.
+            </p>
+          </div>
+          <div class="about-us-images">
+            <div id="image-one" class="about-us-image image-one"></div>
+            <div id="image-two" class="about-us-image image-two"></div>
+            <div id="image-three" class="about-us-image image-three"></div>
+          </div>
+        </div>
+      </section>
+      <section id="services">
+  <div class="services-header">
+    <h2>SERVICES</h2>
+    <button class="btn-view-all" onclick="toggleServices()">View All Services →</button>
+  </div>
+  <div class="services-grid">
+    <!-- First 3 always visible -->
+    <div id="guiding-service" class="service-card">
+      <div class="icon-circle"><i class="fas fa-user-tie"></i></div>
+      <h3>Guiding Service Fee</h3>
+      <p>Professional guide(s) for the duration of the trip.</p>
+    </div>
+  
+    <div id="entrance-fee" class="service-card">
+      <div class="icon-circle"><i class="fas fa-ticket-alt"></i></div>
+      <h3>Entrance Fee</h3>
+      <p>Permits or park fees required for access to certain areas.</p>
+    </div>
+  
+    <div id="field-gear" class="service-card">
+      <div class="icon-circle"><i class="fas fa-campground"></i></div>
+      <h3>Field Gear</h3>
+      <p>Necessary equipment (tents, sleeping bags, etc.) unless specified otherwise.</p>
+    </div>
+  
+    <!-- Hidden group -->
+    <div id="more-services" class="hidden-services">
+      <div id="accommodation" class="service-card">
+        <div class="icon-circle"><i class="fas fa-bed"></i></div>
+        <h3>Hotel/Accommodations</h3>
+        <p>Lodging before, during, or after the trip (hotels, lodges, or camps).</p>
+      </div>
+  
+      <div id="transportation" class="service-card">
+        <div class="icon-circle"><i class="fas fa-car"></i></div>
+        <h3>Car with Driver & Fuel</h3>
+        <p>Transportation during the trip, including vehicle and driver.</p>
+      </div>
+  
+      <div id="cooking-service" class="service-card">
+        <div class="icon-circle"><i class="fas fa-utensils"></i></div>
+        <h3>Cook with Cooking Materials</h3>
+        <p>Meals prepared by a cook, including ingredients and utensils.</p>
+      </div>
+  
+      <div id="horses" class="service-card">
+        <div class="icon-circle"><i class="fas fa-horse"></i></div>
+        <h3>Horses for Packing and Riding</h3>
+        <p>Horses to carry gear (packing) and for riding if needed.</p>
+      </div>
+  
+      <div id="horse-assistant" class="service-card">
+        <div class="icon-circle"><i class="fas fa-users"></i></div>
+        <h3>Horse Assistant</h3>
+        <p>A helper to manage the horses during the trip.</p>
+      </div>
+      
+  
+      <div id="all-meals" class="service-card">
+        <div class="icon-circle"><i class="fas fa-concierge-bell"></i></div>
+        <h3>All Meals</h3>
+        <p>Breakfast, lunch, dinner, and sometimes snacks/beverages.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  </div>
+</section>
 
-                <!-- Features 
-                <div class="features">
-                    <ul>
-                        <li><i class="fas fa-campground"></i> One A-Frame Tent</li>
-                        <li><i class="fas fa-bed"></i> Two Twin Size Beds</li>
-                        <li><i class="fas fa-chair"></i> Two Camping Chairs</li>
-                        <li><i class="fas fa-table"></i> One Mini-Camping Table</li>
-                        <li><i class="fas fa-lightbulb"></i> One Outdoor Bench Light</li>
-                        <li><i class="fas fa-lightbulb"></i> One Dimmable Reading Light</li>
-                    </ul>
-                </div>
--->
-                <!-- Description -->
-                <div class="description">
-                    <h2>Description</h2>
-                    <p>BALE MOUNTAINS HIKING TOURS
-                      Bale Mountains hiking tours is based in Bale Mountains National park(one of famous national parks of Ethiopia) ,  to make your time at the park unforgettable and give you the best tour and Travel service in the whole Country. At bale mountains hiking tours we provide quality guiding services, tailor made tours and customized can trip itineraries to meet needs of each of our clients. Wether you are interested in historical cultural or natural excursion we are here to help plan a trip that will leave you with memories that will last for ever. The staf of bale mountains hiking tours is developed into highly skilled,multy lingual guides and professional teams. We are passionate team with vision of delivering the best exiting experience for customers. Bale mountains hiking tours tourism service the most and very important area to spot Ethiopian highlands. The founder is specialized Tour guide working at BMNP. the Place is ultimate destination for hikers, wildlife watchers, culture and nature enthusiasts, bird watchers and more! Explore one of the highest parks in Africa by horseback, go fishing or experience an authentic community trying local coffee and honey! We are there for you where ever in Ethiopia,  while we recommend One of the best sites to spot the rare and endangered Ethiopian Wolf is on the spectacular Sanetti Plateau as the sun rises.</p>
-                </div>
+<div class="services-section">
+    <h2>Services Not Included</h2>
+    <div class="services-container">
+       
+        <div class="service-item">
+            <h3><i class="fas fa-times-circle" style="color: red; margin-right: 8px;"></i>Tips</h3>
+            <p>Tips are not included in the services.</p>
+        </div>
+        <div class="service-item">
+            <h3><i class="fas fa-times-circle" style="color: red; margin-right: 8px;"></i>Miscellaneous Expenses</h3>
+            <p>Alcohol, drinks, and other miscellaneous expenses are not included.</p>
+        </div>
+        <div class="service-item">
+            <h3><i class="fas fa-times-circle" style="color: red; margin-right: 8px;"></i>Other Services</h3>
+            <p>All services not mentioned are also excluded from the package.</p>
+        </div>
+    </div>
+</div>
 
-                <!-- Location -->
-            </div>
-
-            <!-- Right Section (Sidebar) -->
-            <div class="right-section">
-                <div class="booking-box">
-                    <h2>About Me</h2>
-                    <img src="images/download (1).jfif" alt="Profile">
-                    <p>My name is ..........., and I was born in the small town of Dinsho...</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/youraccount" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://t.me/yourchannel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                </div> 
-                <!-- Add-ons -->
-                <div class="addons">
-                    <h2>Our Services</h2>
-                    <div class="features">
-                        <ul>
-                            <li><i class="fas fa-campground"></i> One A-Frame Tent</li>
-                            <li><i class="fas fa-bed"></i> Two Twin Size Beds</li>
-                            <li><i class="fas fa-chair"></i> Two Camping Chairs</li>
-                            <li><i class="fas fa-table"></i> One Mini-Camping Table</li>
-                            <li><i class="fas fa-lightbulb"></i> One Outdoor Bench Light</li>
-                            <li><i class="fas fa-lightbulb"></i> One Dimmable Reading Light</li>
-                        </ul>
-                    </div>
-            </div>
-        </section>
-        <section>
-            <div class="location">
-                <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
-            </div>
-        </section>
+<section id="journey">
+    <div class="container">
+      <div class="gallery-header">
+        <div>
+          <h2><strong>Journey in</strong> <em>Bale Mountains</em></h2>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="contact.html" class="book-button">Book Now</a>
+          </div>
+      </div>
+  <a href="tours.html">
+      <div class="gallery-grid">
+        <div class="gallery-item item1">Trekking Full Packages</div>
+        <div class="gallery-item item2">Adventure Tours</div>
+        <div class="gallery-item item3">Bird Watching Tours</div>
+        <div class="gallery-item item4">Family Package</div>
+        <div class="gallery-item item5">Group Package</div>
+        <div class="gallery-item item6">Solo Joiners / Couple Package</div>
+        <div class="gallery-item item7">Exclusive, Cultural, Historical, Fauna & Flora, Botanical Tours</div>
+      </div>
+    </a>
+      <div class="contact-text">
+       <h4>Contact us for special types of trip</h4>
+        <p> Kindly send us a message for more information through our contacts with very attractive or reasonable prices. We appreciate discussion and will gladly assist with planning your perfect experience.
+    </p>
+    </div>
+    </div>
+  </section>
     
         <footer>
             <div class="container">
@@ -173,5 +243,19 @@
               </div>
                   
             </footer>
+            <script>
+                function toggleServices() {
+                  const moreSection = document.getElementById("more-services");
+                  const btn = document.querySelector(".btn-view-all");
+              
+                  if (moreSection.classList.contains("show")) {
+                    moreSection.classList.remove("show");
+                    btn.innerHTML = "View All Services →";
+                  } else {
+                    moreSection.classList.add("show");
+                    btn.innerHTML = "Hide Extra Services ↑";
+                  }
+                }
+              </script>
 </body>
 </html>

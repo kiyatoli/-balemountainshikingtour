@@ -137,13 +137,18 @@ h2 {
 }
 
 
-
+#tour-wrapper{
+    background-color: #ebebeb;
+    margin-bottom: -50px;
+}
 /* Wrapper to center the container */
 .tour-wrapper {
+   
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 0;
+    width: 100%;
 }
 
 /* Grid Layout: 3 columns, handles odd numbers well */
@@ -210,13 +215,15 @@ h2 {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .tour-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%; /* 2 columns on tablets */
     }
+   
 }
 
 @media (max-width: 600px) {
     .tour-container {
-        grid-template-columns: 1fr; /* 1 column on mobile */
+        grid-template-columns: 1fr; /* 1 column on mobile */    
     }
 }
 
