@@ -25,28 +25,19 @@
       <script src="nav.js"></script>
 </head>
 <body>
-
-    <div class="top">
-        <a href="mailto:kiyatoliabdu@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-        <p><a href="mailto:kiyatoliabdu@gmail.com">kiyatoliabdu@gmail.com</a></p>
-        <div class="social-top">
-            <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/youraccount" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://t.me/yourchannel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        </div>
-    </div>
     <header>
         <div class="container">
            <nav class="navbar">
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             <ul id="sidemenu">
+            
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="balemountain.html">Bale Mountains National Park</a></li>
                 <li><a href="tours.html">Tours</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                
             </ul>
             <a href="index.html">
                 <img src="images/logo.png" alt="logo" class="logo">
@@ -75,29 +66,7 @@
             <div id="form-message"></div>
           </form>
           
-          <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyyc5EDII4NUszYJuEbzirSY4c_zg6QwBXYjOsdeVPh_8xdyYhYRLztR51OdjP5cHWP/exec' // Paste the URL from Step 3 here
-            const form = document.forms['contact-form']
-            const formMessage = document.getElementById('form-message')
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              
-              formMessage.textContent = 'Sending your message...'
-              formMessage.style.display = 'block'
-              
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                  formMessage.textContent = 'Message sent successfully!'
-                  form.reset()
-                  setTimeout(() => formMessage.style.display = 'none', 5000)
-                })
-                .catch(error => {
-                  formMessage.textContent = 'Error sending message. Please try again.'
-                  console.error('Error!', error.message)
-                })
-            })
-          </script>
+       
           
       
           <!-- Right Side - Contact Information -->
@@ -181,6 +150,28 @@
   </footer>
   
   <script src="script.js"></script>
-
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyyc5EDII4NUszYJuEbzirSY4c_zg6QwBXYjOsdeVPh_8xdyYhYRLztR51OdjP5cHWP/exec' // Paste the URL from Step 3 here
+    const form = document.forms['contact-form']
+    const formMessage = document.getElementById('form-message')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      
+      formMessage.textContent = 'Sending your message...'
+      formMessage.style.display = 'block'
+      
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          formMessage.textContent = 'Message sent successfully!'
+          form.reset()
+          setTimeout(() => formMessage.style.display = 'none', 5000)
+        })
+        .catch(error => {
+          formMessage.textContent = 'Error sending message. Please try again.'
+          console.error('Error!', error.message)
+        })
+    })
+  </script>
 </body>
 </html>
