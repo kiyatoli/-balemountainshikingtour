@@ -14,12 +14,16 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+      
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&family=Poppins:ital,wght@1,300&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
- <title>BALE MOUNTAINS HIKING TOURS</title>
-
+      <title>BALE MOUNTAINS HIKING TOURS</title>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/06ef73bdda.js"></script>
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="style.css">
@@ -27,16 +31,7 @@
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="top">
-        <a href="mailto:kiyatoliabdu@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-        <p><a href="mailto:kiyatoliabdu@gmail.com">kiyatoliabdu@gmail.com</a></p>
-        <div class="social-top">
-            <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/youraccount" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://t.me/yourchannel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        </div>
-    </div>
+  
     <header>
         <div class="container">
             <nav class="navbar">
@@ -49,9 +44,7 @@
                     <li><a href="tours.html">Tours</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-                <a href="index.html">
-                    <img src="images/logo.png" alt="logo" class="logo">
-                </a>
+                <img src="images/logo/logog.png" alt="logo" class="logo">
             </nav>
         </div>
       </header>
@@ -187,54 +180,73 @@
             </div>
         </div>
     </section>
-    <section id="tour3">
-        <h1>Related</h1>
-        <div class="tour-wrapper">
-            <div class="tour-container">
-        
-                <!-- Card 1 -->
-                <a href="tour6.html" class="tour-card">
-                    <img src="images/image1.jpg" alt="Wildlife Tour">
-                    <h3>6 DAYS AND 5 NIGHTS BALE MOUNTAINS HIKING</h3>
-                    <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 6 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: HIKING </span>
-                    </div>
-                </a>
-    
-                <!-- Card 2 -->
-                <a href="tour5.html" class="tour-card">
-                    <img src="images/image2.jpg" alt="Wildlife Tour">
-                    <h3>5 DAYS AND 4 NIGHTS BALE MOUNTAINS TREKKING</h3>
-                    <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 5 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: TREKKING</span>
-                    </div>
-                </a>
-    
-                <!-- Card 3 -->
-                <a href="tour4.html" class="tour-card">
-                    <img src="images/image3.jpg" alt="Wildlife Tour">
-                    <h3>4 DAYS BALE MOUNTAINS TREKKING</h3>
-                    <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 4 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: TREKKING</span>
-                    </div>
-                </a>
-    
-                <!-- Card 4 -->
-                <a href="tour3.html" class="tour-card">
-                    <img src="images/image4.jpg" alt="Wildlife Tour">
-                    <h3>3 DAYS and 2 NIGHTS WILDLIFE TOURS</h3>
-                    <div class="tour-info">
-                        <span><i class="fas fa-clock"></i> Duration: 3 Days</span>
-                        <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
-                    </div>
-                </a>
-    
-            </div>
-    </div>
-</section>
+    <section id="tour3" class="related-tours">
+        <div class="related-tours__wrapper">
+          <h2 class="related-tours__header">Related Tours</h2>
+          <div class="related-tours__grid">
+            <!-- Card 1 -->
+            <a href="tour6.html" class="tour-card">
+              <div class="tour-card__image">
+                <img src="images/image1.jpg" alt="Bale Mountains Hiking">
+              </div>
+              <div class="tour-card__content">
+                <h3>6-Day and 5-Nights Bale Mountains Hiking</h3>
+                <p>Explore Bale Mountains with a thrilling 6-day hike.</p>
+                <ul class="tour-card__details">
+                  <li><i class="fas fa-clock"></i> 6 Days, 5 Nights</li>
+                  <li><i class="fas fa-tags"></i> Hiking</li>
+                </ul>
+                <span class="tour-card__cta">Explore</span>
+              </div>
+            </a>
+            <!-- Card 2 -->
+            <a href="tour5.html" class="tour-card">
+              <div class="tour-card__image">
+                <img src="images/image2.jpg" alt="Bale Mountains Trekking">
+              </div>
+              <div class="tour-card__content">
+                <h3>5-Day and 4-Nights Mountains Trekking</h3>
+                <p>A scenic trek through Bale’s rugged landscapes.</p>
+                <ul class="tour-card__details">
+                  <li><i class="fas fa-clock"></i> 5 Days, 4 Nights</li>
+                  <li><i class="fas fa-tags"></i> Trekking</li>
+                </ul>
+                <span class="tour-card__cta">Explore</span>
+              </div>
+            </a>
+            <!-- Card 3 -->
+            <a href="tour4.html" class="tour-card">
+              <div class="tour-card__image">
+                <img src="images/image3.jpg" alt="Bale Mountains Trekking">
+              </div>
+              <div class="tour-card__content">
+                <h3>4-Day Bale Mountains Trekking </h3>
+                <p>Short but immersive Bale Mountains trek.</p>
+                <ul class="tour-card__details">
+                  <li><i class="fas fa-clock"></i> 4 Days</li>
+                  <li><i class="fas fa-tags"></i> Trekking</li>
+                </ul>
+                <span class="tour-card__cta">Explore</span>
+              </div>
+            </a>
+            <!-- Card 4 -->
+            <a href="tour3.html" class="tour-card">
+              <div class="tour-card__image">
+                <img src="images/image4.jpg" alt="Wildlife Tour in Bale Mountains">
+              </div>
+              <div class="tour-card__content">
+                <h3>3-Day and 2-Nights Wildlife Tours</h3>
+                <p>Discover Bale’s wildlife in a quick 3-day tour.</p>
+                <ul class="tour-card__details">
+                  <li><i class="fas fa-clock"></i> 3 Days, 2 Nights</li>
+                  <li><i class="fas fa-tags"></i> Wildlife</li>
+                </ul>
+                <span class="tour-card__cta">Explore</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 <footer>
     <div class="container">
     <div class="row">

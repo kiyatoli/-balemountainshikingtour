@@ -14,6 +14,9 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,9 +44,7 @@
                 <li><a href="tours.html">Tours</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <a href="index.html">
-                <img src="images/logo.png" alt="logo" class="logo">
-            </a>
+            <img src="images/logo/logog.png" alt="logo" class="logo">
         </nav>
         </div>
       </header>
@@ -53,57 +54,96 @@
             <p class="subtitle">Explore the stunning landscapes of the Bale Mountains.</p>
         </div>
     </section>
-      <section id="tour-wrapper">
-      <div class="tour-wrapper">
-        <div class="tour-container">
-            <!-- Card 1 -->
-            <a href="tour10.html" class="tour-card">
-                <img src="images/new/senate.jpg" alt="Wildlife Tour">
-                <h3>10 DAYS BALE MOUNTAINS TREKKING</h3>
-                <div class="tour-info">
-                    <span><i class="fas fa-clock"></i> Duration: 10 Days</span>
-                    <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
-                </div>
-            </a>
-            <!-- Card 2 -->
-            <a href="tour6.html" class="tour-card">
-                <img src="images/image12.jpg" alt="Wildlife Tour">
-                <h3>6 DAYS BALE MOUNTAINS TREKKING</h3>
-                <div class="tour-info">
-                    <span><i class="fas fa-clock"></i> Duration:6 Days</span>
-                    <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
-                </div>
-            </a>
-            <!-- Card 3 -->
-            <a href="tour5.html" class="tour-card">
-                <img src="images/new/Balemountains (1).jpg" alt="Wildlife Tour">
-                <h3>5 DAYS BALE MOUNTAINS TREKKING</h3>
-                <div class="tour-info">
-                    <span><i class="fas fa-clock"></i> Duration:5 Days</span>
-                    <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
-                </div>
-            </a>
-            <!-- Card 4 -->
-            <a href="tour4.html" class="tour-card">
-                <img src="images/new/niyala4.jpg" alt="Wildlife Tour">
-                <h3>4 DAYS BALE MOUNTAINS TREKKING</h3>
-                <div class="tour-info">
-                    <span><i class="fas fa-clock"></i> Duration:4 Days</span>
-                    <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
-                </div>
-            </a>
-            <!-- Card 5 -->
-            <a href="tour3.html" class="tour-card">
-                <img src="images/new/waterfall.jpg" alt="Wildlife Tour">
-                <h3>2 Days and 3 Nights Wildlife Tour Ethiopia</h3>
-                <div class="tour-info">
-                    <span><i class="fas fa-clock"></i> Duration:2 Days and 3 Nights</span>
-                    <span><i class="fas fa-tags"></i> Category: Wildlife Tours</span>
-                </div>
-            </a>
+
+    <section id="tour-section" class="tours">
+      <div class="tours__wrapper">
+        <header class="tours__header">
+          
+          <h2>Discover Ethiopia’s breathtaking wildlife and landscapes.</h2>
+        </header>
+        <div class="tours__grid">
+          <!-- Tour 1 -->
+          <a href="tour10.html" class="tour-card">
+            <div class="tour-card__image1">
+              <img src="images/new/senate.jpg" alt="Bale Mountains Senate Plateau">
+            </div>
+            <div class="tour-card__content">
+              <h3>10 Days and 9 Nights Bale Mountains Hiking</h3>
+              <p>Unforgettable trek through Ethiopia’s wilderness.</p>
+              <ul class="tour-card__details">
+                <li><i class="fas fa-clock"></i> 10 Days,9 Nights</li>
+                <li><i class="fas fa-tags"></i> Wildlife</li>
+              </ul>
+              <span class="tour-card__cta">Explore</span>
+            </div>
+          </a>
+          <!-- Tour 2 -->
+          <a href="tour6.html" class="tour-card">
+            <div class="tour-card__image1">
+              <img src="images/image12.jpg" alt="Bale Mountains Wildlife">
+            </div>
+            <div class="tour-card__content">
+              <h3>6 Days and 5 Nights Bale Mountains Hiking</h3>
+              <p>Adventure and nature in Ethiopia’s highlands.</p>
+              <ul class="tour-card__details">
+                <li><i class="fas fa-clock"></i> 6 Days,5 Nights</li>
+                <li><i class="fas fa-tags"></i> Wildlife</li>
+              </ul>
+              <span class="tour-card__cta">Explore</span>
+            </div>
+          </a>
+          <!-- Tour 3 -->
+          <a href="tour5.html" class="tour-card">
+            <div class="tour-card__image1">
+              <img src="images/new/Balemountains (1).jpg" alt="Bale Mountains Scenic Trek">
+            </div>
+            <div class="tour-card__content">
+              <h3>5 Days and 4 Nights Bale Mountains Trekking</h3>
+              <p>Compact adventure in Bale’s rugged beauty.</p>
+              <ul class="tour-card__details">
+                <li><i class="fas fa-clock"></i> 5 Days,4 Nights</li>
+                <li><i class="fas fa-tags"></i> Wildlife</li>
+              </ul>
+              <span class="tour-card__cta">Explore</span>
+            </div>
+          </a>
+          <!-- Tour 4 (Hidden Initially) -->
+          <a href="tour4.html" class="tour-card hidden">
+            <div class="tour-card__image1">
+              <img src="images/new/niyala4.jpg" alt="Niyala in Bale Mountains">
+            </div>
+            <div class="tour-card__content">
+              <h3>4 Nights Bale Mountains Trekking</h3>
+              <p>Thrilling trek with unique wildlife.</p>
+              <ul class="tour-card__details">
+                <li><i class="fas fa-clock"></i> 4 Days</li>
+                <li><i class="fas fa-tags"></i> Wildlife</li>
+              </ul>
+              <span class="tour-card__cta">Explore</span>
+            </div>
+          </a>
+          <!-- Tour 5 (Hidden Initially) -->
+          <a href="tour3.html" class="tour-card hidden">
+            <div class="tour-card__image1">
+              <img src="images/new/waterfall.jpg" alt="Waterfall in Bale Mountains">
+            </div>
+            <div class="tour-card__content">
+              <h3>3 Days and 2 Nights Wildlife Tours</h3>
+              <p>Quick escape to Ethiopia’s nature.</p>
+              <ul class="tour-card__details">
+                <li><i class="fas fa-clock"></i> 3 Days, 2 Nights</li>
+                <li><i class="fas fa-tags"></i> Wildlife</li>
+              </ul>
+              <span class="tour-card__cta">Explore</span>
+            </div>
+          </a>
         </div>
-    </div>
-  </section>
+        <div class="tours__see-more">
+          <button id="toggle-btn" class="see-more-btn">See More</button>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="container">
       <div class="row">
@@ -158,6 +198,23 @@
         </div>
             
       </footer>
+<script>
+ document.getElementById('toggle-btn').addEventListener('click', function() {
+  const hiddenCards = document.querySelectorAll('.tour-card.hidden');
+  const isShowingMore = this.textContent === 'See More';
 
+  if (isShowingMore) {
+    // Show all cards
+    hiddenCards.forEach(card => card.classList.remove('hidden'));
+    this.textContent = 'See Less'; // Switch to "See Less"
+  } else {
+    // Hide the last 2 cards
+    document.querySelectorAll('.tour-card:nth-child(n+4)').forEach(card => {
+      card.classList.add('hidden');
+    });
+    this.textContent = 'See More'; // Switch back to "See More"
+  }
+});
+</script>
 </body>
 </html>

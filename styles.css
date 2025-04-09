@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,20 +12,20 @@
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    background: rgb(255, 255, 255);
+    background: rgb(255, 254, 254);
     position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
     overflow-x: hidden;
+}
 
-  }
-  
+
   header {
     top: 0;
     left: 0;
     position: relative;
-    background-color: #d1d1d1;
+    background-color: #f3f3f3;
     padding: 4px; /* Reduced padding for a smaller header */
     height: 80px;
     width: 100%;
@@ -35,11 +37,24 @@
   
   .logo {
     margin-left: 150px;
-    width: 250px; 
+    width: 210px; 
     line-height: 50%;
     float: right;
   
   }
+
+  @media (max-width: 767px) {
+    .logo {
+      width: 160px;
+      margin: 20px auto; 
+      display: block;
+      margin-top: 50px;
+      margin-left: 100px;
+      float: none;
+    }
+  }
+
+  
   .navbar {
     display: flex;
     align-items: center;
@@ -50,6 +65,7 @@
   }
   
   .navbar ul {
+    font-style: italic;
     font-size: 16px;
     line-height: 50%;
     list-style-type: none;
@@ -60,20 +76,20 @@
   }
   
   .navbar a {
-    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     color: rgb(255, 255, 255);
     padding: 10px;
     text-align: center;
-    color: #000000;
-    font-weight: 200;
-    text-decoration: none; /* Add this line to remove underline */
-  }
-  .navbar ul li a:hover {
-    background-color: hsla(0, 0%, 20%, 0.308);
+    color: #0d200e;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0.9;  
+}
+
+.navbar ul li a:hover {
+    background-color: #6B8E23;
     color: #fff;
-  }
-
-
+}
 
   video {
     width: 100%;
@@ -90,91 +106,11 @@
   }
   
 
-main {
-    padding: 2em;
-}
-.about{
-    background-color:rgb(252, 249, 249);
-    position: relative;
-    width: 100%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-
-.about .contentBx{
-     
-    max-width: 50%;
-    width: 50%;
-    text-align: left;
-    padding-right: 40px;
-  
-}
-
-.tours {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    
-}
-
-.tours h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.tour-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-}
-
-.tour-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 300px;
-    text-align: left;
-    margin: 5px;
-}
-
-.tour-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.tour-info {
-    padding: 15px;
-}
-
-.tour-info h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.tour-info p {
-    font-size: 0.9em;
-    margin: 5px 0;
-    color: #777;
-}
-
-.tour-info span {
-    font-weight: bold;
-    color: #333;
-}
-
 
 /* Hero Text Section */
 
 #hero-text {
-  background-color: #ececec;
+    background-color: #ececec;
     padding: 90px 50px;
     text-align: center;
    
@@ -183,10 +119,20 @@ main {
 #hero-text h1 {
     
     font-size: 2.5em;
-    color: #2a5d84;
+    color: #2F4F4F;
     margin-bottom: 20px;
     font-weight: bold;
 }
+#hero-text h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #6B8E23);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
 @media (max-width: 768px) {
   #hero-text h1 {
     font-size: 1.8em;
@@ -220,6 +166,7 @@ main {
 }
 #extra-content h1 {
  text-align: center;
+
 }
 
 .hidden {
@@ -233,7 +180,7 @@ main {
 }
 
 .see-more, .learn-less {
-  background-color: #2a5d84;
+  background-color: #6B8E23;
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -247,7 +194,7 @@ main {
 }
 
 .see-more:hover, .learn-less:hover {
-  background-color: #1e4a6a;
+  background-color: #4A7C59;
   transform: scale(1.05);
 }
 
@@ -257,46 +204,6 @@ main {
 }
 
 
-#tours a {
-  text-decoration: none;
-  color: #111fe0;
-}
-
-#tours a:hover {
-  color: #ff6600; /* Change text color on hover */
-}
-
-#tours a:hover .tour-card {
-  transform: translateY(-5px); /* Moves the card slightly up */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
-  transition: 0.3s ease-in-out;
-}
-#tours a:hover .tour-card {
-  opacity: 0.8;
-}
-
-.image-wrapper {
-  position: relative;
-  margin: 0 auto 40px auto; /* Centers horizontally */
-  width: 90%; /* Increase the width */
-  max-width: 800px; /* Limit the max width */
-  text-align: center; /* Ensures text inside is centered */
-}
-
-.destination-image {
-  width: 100%; /* Makes the image responsive */
-  height: auto; /* Maintains aspect ratio */
-  max-height: 400px; /* Reduces height slightly */
-  object-fit: cover; /* Ensures it fills the space properly */
-  display: block; /* Removes any extra spacing below the image */
-  margin: 0 auto; /* Ensures the image itself is centered */
-}
-
-.image-caption {
-  text-align: center;
-  font-size: 14px;
-  margin-top: 10px;
-}
 
 /*places to see*/
 .places-section {
@@ -310,15 +217,17 @@ main {
   margin-bottom: 50px;
   position: relative;
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: #2F4F4F;
 }
-
+.section-title h2 {
+  color: #000;
+}
 .section-title::after {
   content: '';
   display: block;
   width: 100px;
   height: 4px;
-  background: linear-gradient(to right, #e74c3c, #f39c12);
+  background: linear-gradient(to right, #6B8E23);
   margin: 15px auto;
   border-radius: 2px;
 }
@@ -501,11 +410,12 @@ main {
 .place-card:nth-child(9) { animation-delay: 0.9s; }
 
 
-
+/*ABotu US*/
 #about-us {
-  background-color: #eeeeee;
+  background-color: #e0e0e0;
   padding: 50px 20px;
   font-family: Arial, sans-serif;
+  height: 690px;
 }
 
 .about-us-container {
@@ -524,35 +434,47 @@ main {
 }
 
 .about-us-text h2 {
-  color: #335b1f;
+  font-family: Arial, sans-serif;
+  color: #2F4F4F;
   font-size: 28px;
   margin-bottom: 20px;
   letter-spacing: 2px;
+  
 }
 
 .about-us-text p {
+  font-family: 'Arial', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 15px;
   color: #333;
 }
-
+.about-us-text h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #6B8E23;
+  display: block;
+  margin: 10px 50px 0;
+  border-radius: 2px;
+}
 .about-us-images {
   display: flex;
   flex-direction: row;
   gap: 15px;
   flex: 1;
   justify-content: center;
-  min-width: 300px;
+  min-width: 700px;
 }
 
 .about-us-image {
-  width: 150px;
-  height: 500px;
+  width: 600px;
+  height: 450px;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
   transform: rotate(2deg);
+  margin-top: 50px;
 }
 
 .image-one {
@@ -570,17 +492,85 @@ main {
   background-position: right bottom;
 }
 
+/* Mobile About Us (0-767px) - Desktop Style Scaled Down */
+@media (max-width: 767px) {
+  #about-us {
+    background-color: #e0e0e0;
+    padding: 30px 15px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .about-us-text {
+    flex: 1;
+    min-width: 0; /* Allows proper shrinking */
+  }
+
+  .about-us-text h2 {
+    color: #335b1f;
+    font-size: 22px; /* Scaled down from 28px */
+    margin-bottom: 15px;
+    letter-spacing: 1px; /* Reduced from 2px */
+    text-align: left; /* Maintain desktop alignment */
+    margin-left: 10px;
+  }
+
+  .about-us-text p {
+    font-family: Arial, Helvetica, sans-serif;
+   font-size: 17px;
+  margin-bottom: 30px;
+  color: #4a4a4a;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  .about-us-images {
+    margin-left: -160px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Reduced from 15px */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    padding-bottom: 10px; /* Space for scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .about-us-image {
+    width: 100px; /* Scaled down from 600px */
+    height: 265px; /* Scaled down proportionally (450/600*220) */
+    flex-shrink: 0; /* Prevents images from shrinking */
+    background-size: cover;
+    background-position: center;
+  
+    border-radius: 8px;
+    transform: rotate(2deg); /* Maintains desktop effect */
+    margin-top: 0; /* Adjusted for mobile */
+  }
+
+  /* Hide scrollbar while keeping functionality */
+  .about-us-images::-webkit-scrollbar {
+    display: none;
+  }
+}
 
 
  #services {
-     background-color: #b8b8b8;
+     background-image: url('images/new/Manyate\ Coffee\ Village.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     opacity: 0.9;
       padding: 40px 20px;
       width: 100%;
       margin: auto;
     }
 
     #services .services-header {
-      
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -588,10 +578,11 @@ main {
     }
 
     #services .services-header h2 {
-      margin-left: 700px;
-      color: #2d5c1d;
-      font-size: 28px;
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: #2F4F4F;
       position: relative;
+      margin-left: 610px;
     }
     
     
@@ -599,13 +590,13 @@ main {
       content: '';
       width: 60px;
       height: 3px;
-      background: #2d5c1d;
+      background: #6B8E23;
       display: block;
       margin: 10px auto 0;
       border-radius: 2px;
     }
     #services .btn-view-all {
-      background-color: #2d5c1d;
+      background-color: #6B8E23;
       color: #fff;
       border: none;
       padding: 10px 18px;
@@ -613,9 +604,11 @@ main {
       font-size: 14px;
       cursor: pointer;
     }
-
+   #services .btn-view-all:hover {
+      background-color: #4A7C59;
+   }
     #services .services-grid {
-      margin-left: 280px;
+      margin-left: 150px;
       max-width: 1000px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -800,21 +793,87 @@ main {
   }
 }
 
+.simple-services-section {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 50px auto;
+  border-radius: 16px;
+  margin-top: -25px;
+ 
+}
+
+.simple-services-section h2 {
+  margin-left: 40px;
+  font-size: 28px;
+  color: #e23838;
+  margin-bottom: 30px;
+  position: relative;
+
+}
+
+.simple-services-section h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #db2323;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Horizontal UL List */
+.simple-services-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  
+}
+
+.simple-services-section ul li {
+  font-size: 16px;
+  color: #000000;
+  padding: 10px 15px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  transition: background 0.3s;
+  background-color: #fdfcf981;
+}
+
+.simple-services-section ul li:hover {
+  background: #7b867e;
+}
+
+
+.exclude-icon {
+  color: #e63946;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+
 
  /* Contact Section */
  .contact-section {
+  max-width: 1450px;
   padding: 50px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #f9f9f9 0%, #f1f3f5 100%);
+  background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
   border-radius: 20px;
   margin: 40px 20px;
+  margin-left: 70px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .contact-section h2 {
   font-size: 30px;
   margin-bottom: 30px;
-  color: #1a3c34;
+  color: #2F4F4F;
   position: relative;
 }
 
@@ -822,7 +881,7 @@ main {
   content: '';
   width: 80px;
   height: 5px;
-  background: #e67e22;
+  background: #6B8E23;
   position: absolute;
   bottom: -15px;
   left: 50%;
@@ -858,12 +917,11 @@ main {
 }
 
 .contact-section ul li:hover {
-  background: #e67e22;
+  background: #4A7C59;
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 
 
@@ -880,7 +938,7 @@ main {
   }
 
   #services .services-header h2 {
-    margin-left: 0;
+    margin-left: 15px;
     text-align:left;
     font-size: 24px;
  
@@ -900,7 +958,10 @@ main {
   #services .service-card {
     padding: 20px 15px 15px 15px;
   }
-
+.simple-services-section h2 {
+  font-size: 24px;
+    margin-left: -39.54px;
+}
   #guiding-service::before,
   #entrance-fee::before,
   #field-gear::before,
@@ -921,6 +982,7 @@ main {
 
 .contact-section h2 {
     font-size: 24px;
+    margin-left: -39.54px;
 }
 
 .contact-section p {
@@ -933,70 +995,6 @@ main {
 }
 
 }
-
-.simple-services-section {
-  padding: 40px 20px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  max-width: 1000px;
-  margin: 50px auto;
-  border-radius: 16px;
-  margin-top: -25px;
- 
-}
-
-.simple-services-section h2 {
-  font-size: 28px;
-  color: #e23838;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.simple-services-section h2::after {
-  content: '';
-  width: 60px;
-  height: 3px;
-  background: #db2323;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-/* Horizontal UL List */
-.simple-services-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  
-}
-
-.simple-services-section ul li {
-  font-size: 16px;
-  color: #555;
-  padding: 10px 15px;
-  background: #fff;
-  border-radius: 16px;
-  border: 1px solid #ddd;
-  transition: background 0.3s;
-  background-color: #ccc4b8;
-}
-
-.simple-services-section ul li:hover {
-  background: #ffecec;
-}
-
-
-.exclude-icon {
-  color: #e63946;
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-
 
 
 /* History Section */
@@ -1400,7 +1398,8 @@ main {
     width: 100%;
     max-width: 1000px;
     height: auto;
-    border-radius: 10px;
+    max-height: 400px;
+    border-radius: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -1429,7 +1428,7 @@ main {
 
 .content-title {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #2F4F4F;
     margin-bottom: 15px;
 }
 
@@ -1540,7 +1539,8 @@ main {
   font-weight: bold;
   color: #2a5d84;
   margin-bottom: 40px;
-  text-transform: uppercase;
+  margin-top: 20px;
+  
 }
 
 /* Campsite Layout */
@@ -1612,7 +1612,7 @@ main {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
-  background: #2a5d84;
+  background-color: #6B8E23;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -1622,7 +1622,7 @@ main {
 }
 
 .see-more-btn:hover {
-  background: #1f4d6b;
+  background-color: #4A7C59;
 }
 
 /* Responsive Design - Stacks on Small Screens */
@@ -2001,13 +2001,14 @@ main {
 
 /*COntact */
 /* Main Contact Container */
+
 .contact-container {
   margin: 50px auto; /* Center the container horizontally */
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
   width: 80%;
   max-width: 900px;
-  background: white;
+  background: rgb(255, 255, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -2025,6 +2026,7 @@ main {
 .contact-form h2 {
   font-size: 20px;
   font-weight: bold;
+  color: #2F4F4F ;
 }
 
 /* Ensure Each Field is on Its Own Row */
@@ -2053,7 +2055,7 @@ main {
 /* Send Button */
 .contact-form button {
   padding: 12px;
-  background: #6aa84f;
+  background: #6B8E23;
   border: none;
   color: white;
   font-size: 16px;
@@ -2063,13 +2065,13 @@ main {
 }
 
 .contact-form button:hover {
-  background: #5b9745;
+  background: #4A7C59;
 }
 
 /* Right Side - Contact Info */
 .contact-info {
   padding: 40px;
-  background: #f9f9f9;
+  background: #f3f1f1;
   display: grid;
   gap: 15px;
   align-content: start;
@@ -2078,6 +2080,7 @@ main {
 .contact-info h2 {
   font-size: 20px;
   font-weight: bold;
+  color: #2F4F4F ;
 }
 
 .contact-info p {
@@ -2136,7 +2139,8 @@ main {
   }
 
   .contact-form label {
-    width: 100%; /* Prevent text overflow */
+    
+    max-width: 260px; /* Prevent text overflow */
   }
 }
 
@@ -2402,8 +2406,9 @@ footer {
     .fa-bars, .fa-xmark {
         display: none;
         z-index: 1001;
-        font-size: 24px;
+        font-size: 28px;
         cursor: pointer;
+        margin-top: 15px;
     }
     
     /* Show only the bars icon when menu is closed */
@@ -2418,21 +2423,24 @@ footer {
     
     #sidemenu {
         position: fixed;
-        top: 120px;
+        top: 80px;
         left: -270px;
         width: 250px;
         height: calc(100vh - 70px);
-        background-color: #ffffffb2;
+        background-color: #eff8b8d3;
         flex-direction: column;
         padding: 20px;
         box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
         transition: left 0.3s ease;
         z-index: 1000;
         border-radius: 0 8px 8px 0;
-       
         gap: 15px;
+       
     }
-    
+    .logo {
+      margin-top:55px;
+      margin-left: 130px;
+    }
     #sidemenu.active {
         left: 0;
     }
@@ -2443,6 +2451,7 @@ footer {
         border-bottom: 1px solid #f0f0f0; /* Separator between items */
     }
     #sidemenu li a {
+    
     white-space: nowrap; /* Keep text on one line */
     overflow: hidden;
     text-overflow: ellipsis; /* Show ... for overflow */
@@ -2459,8 +2468,7 @@ footer {
         z-index: 1002; /* Ensure navbar stays above menu */
         
     }
-    
-    /* Optional: Add backdrop effect when menu is open */
+ /* Optional: Add backdrop effect when menu is open */
     .menu-backdrop {
         position: fixed;
         top: 70px;
@@ -2775,4 +2783,12 @@ hr {
   .col input {
     width: 150px;
   }
+
+  
 }
+
+/*after hero section h1 for the places section color is not chnagig */
+.section-title {
+  color: #2F4F4F;
+}
+
