@@ -389,6 +389,9 @@ section#tour3 .tour-wrapper {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     transition: transform 0.3s ease;
+    display: flex;
+  justify-content: space-between; /* or align items based on your design */
+  gap: 10px; /* Optional: Ensures space between buttons */
   }
   
   .tour-card.hidden {
@@ -442,8 +445,8 @@ section#tour3 .tour-wrapper {
     color: #3498db;
   }
   
-  .tour-card__cta {
-    padding: 8px 15px;
+  .tour-card__cta1 {
+    padding: 2px 7px;
     background: #6B8E23;
     color: #fff;
     border-radius: 4px;
@@ -453,9 +456,11 @@ section#tour3 .tour-wrapper {
     text-transform: uppercase;
     transition: background 0.3s ease;
     align-self: flex-end;
+   margin-bottom: 10PX;
+   
   }
   
-  .tour-card__cta:hover {
+  .tour-card__cta1:hover {
     background: #4A7C59;
   }
   
@@ -526,7 +531,7 @@ section#tour3 .tour-wrapper {
     font-size: 0.75rem; /* Smaller details */
   }
 
-  .tour-card__cta {
+  .tour-card__cta1 {
     padding: 6px 12px; /* Smaller button */
     font-size: 0.8rem; /* Smaller button text */
   }
@@ -747,3 +752,5 @@ section#tour3 .tour-wrapper {
     font-size: 0.45rem; /* Reduced from 0.55rem */
   }
 }
+
+
