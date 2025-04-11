@@ -511,7 +511,8 @@ section#tour3 .tour-wrapper {
   }
 
   .tour-card__image1 img {
-    height: 120px; /* Slightly smaller image height */
+   width: 90%;
+    height: 200px; /* Slightly smaller image height */
   }
 
   .tour-card__content {

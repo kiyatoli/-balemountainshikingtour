@@ -87,22 +87,47 @@
     background-color: #6B8E23;
     color: #fff;
 }
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 630px; /* Default height for desktop */
+}
 
-  video {
-    width: 100%;
-    height: 630px;
-    object-fit: cover;
-  }
-  
-  /* Mobile styles */
-  @media (max-width: 768px) {
-    video {
-      height: 300px; /* Adjust height for smaller screens */
-      object-fit: cover;
-    }
-  }
-  
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/* Mobile styles */
+
+.overlay-image {
+  position: absolute;
+  bottom: -50px; /* Move the image to the bottom */
+  left: 15px; /* Move the image to the left */
+  width: 100%; /* Optional: make the image span the width for desktop */
+  max-width: 250px; /* Optional: limit width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure proper fit */
+  z-index: 1; /* Ensure the image is on top of the video */
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    height: 300px; /* Adjust height for mobile screens */
+  }
+
+  .overlay-image {
+    position: absolute; /* Position the image on top of the video */
+    bottom: -50px; /* Adjust margin from the bottom */
+    left: 10px; /* Adjust margin from the left */
+    width: 50%; /* Adjust image size for mobile */
+    max-width: 200px; /* Optional: limit the image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure proper fit */
+    z-index: 1; /* Ensure the image is on top of the video */
+  }
+}
 
 /* Hero Text Section */
 
@@ -475,17 +500,17 @@
 }
 
 .image-one {
-  background-image: url('images/image11.jpg');
+  background-image: url('images/new/niyala3.jpg');
   background-position: top left;
 }
 
 .image-two {
-  background-image: url('images/image12.jpg');
+  background-image: url('images/new/niyalag.jpg');
   background-position: center center;
 }
 
 .image-three {
-  background-image: url('images/image14.jpeg');
+  background-image: url('images/new/Ethiopian\ Wolf\ Yawning.jpg');
   background-position: right bottom;
 }
 
@@ -1342,31 +1367,6 @@
   z-index: 1000; /* Makes sure it's on top of the other content */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /*Bale Mountains National Park */
   /* General Styling */
  /* Section Styling */
@@ -1525,7 +1525,6 @@
 }
 
 
-
 /* Section Styling */
 #campsites {
   max-width: 1100px;
@@ -1637,8 +1636,9 @@
   }
 
   .camp-image {
-    width: 100%;
-    height: auto;
+      width: 98%; /* Adjust image width for better layout */
+      height: 200px;
+    
   }
 
   .camp-content {
@@ -1657,292 +1657,6 @@
     max-width: 500px; /* Expanded size */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Dinsho HQ Section 
-.dinsho-section {
-  padding: 60px 20px;
-  background-color: #e8f5e9; /* Light green background 
-}
-
-.dinsho-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.dinsho-text {
-  flex: 1;
-}
-
-.dinsho-title {
-  font-size: 2.2rem;
-  color: #1b5e20; /* Dark green 
-  margin-bottom: 20px;
-}
-
-.dinsho-description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.dinsho-image {
-  flex: 1;
-}
-
-.dinsho-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Web Valley Section 
-.web-valley-section {
-  padding: 60px 20px;
-  background-color: #fff3e0; /* Light orange background 
-}
-
-.web-valley-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.web-valley-text {
-  flex: 1;
-}
-
-.web-valley-title {
-  font-size: 2.2rem;
-  color: #e65100; /* Dark orange 
-  margin-bottom: 20px;
-}
-
-.web-valley-description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.web-valley-image {
-  flex: 1;
-}
-
-.web-valley-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Wasema and Rafu Campsite Section 
-.wasema-rafu-section {
-  padding: 60px 20px;
-  background-color: #e3f2fd; /* Light blue background 
-}
-
-.wasema-rafu-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.wasema-rafu-text {
-  flex: 1;
-}
-
-.wasema-rafu-title {
-  font-size: 2.2rem;
-  color: #0d47a1; /* Dark blue 
-  margin-bottom: 20px;
-}
-
-.wasema-rafu-description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.wasema-rafu-image {
-  flex: 1;
-}
-
-.wasema-rafu-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Harenna Forest Section 
-.harenna-forest-section {
-  padding: 60px 20px;
-  background-color: #fce4ec; /* Light pink background 
-}
-
-.harenna-forest-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.harenna-forest-text {
-  flex: 1;
-}
-
-.harenna-forest-title {
-  font-size: 2.2rem;
-  color: #880e4f; /* Dark pink 
-  margin-bottom: 20px;
-}
-
-.harenna-forest-description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.harenna-forest-image {
-  flex: 1;
-}
-
-.harenna-forest-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Harena Bamboo and Waterfall Trail Section 
-.harena-trail-section {
-  padding: 60px 20px;
-  background-color: #f0f4c3; /* Light lime background 
-}
-
-.harena-trail-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.harena-trail-text {
-  flex: 1;
-}
-
-.harena-trail-title {
-  font-size: 2.2rem;
-  color: #827717; /* Dark lime 
-  margin-bottom: 20px;
-}
-
-.harena-trail-description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.harena-trail-image {
-  flex: 1;
-}
-
-.harena-trail-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Coffee Collector Section 
-.coffee-collector-section {
-  padding: 60px 20px;
-  background-color: #ffebee; /* Light red background
-}
-
-.coffee-collector-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.coffee-collector-text {
-  flex: 1;
-}
-
-.coffee-collector-title {
-  font-size: 2.2rem;
-  color: #c62828; /* Dark red 
-  margin-bottom: 20px;
-}
-
-.coffee-collector-description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.coffee-collector-image {
-  flex: 1;
-}
-
-.coffee-collector-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Harvesting Honey Section 
-.honey-section {
-  padding: 60px 20px;
-  background-color: #fff8e1; /* Light yellow background 
-}
-
-.honey-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.honey-text {
-  flex: 1;
-}
-
-.honey-title {
-  font-size: 2.2rem;
-  color: #f9a825; /* Dark yellow 
-  margin-bottom: 20px;
-}
-
-.honey-description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.honey-image {
-  flex: 1;
-}
-
-.honey-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-*/
 
 /* General Styles */
 main {
@@ -2288,86 +2002,7 @@ footer {
 .col form input {
   color: #000;
 }
-  /*Bale Mountains National Park 
-  /* General Styling 
-.destination-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Title Styling 
-.section-title {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-/* Image Styling 
-.image-wrapper {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.destination-image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.image-caption {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
-}
-/* Content Styling 
-.content-wrapper {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.content-title {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-.content-description {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Call-to-Action Button Styling 
-.cta-wrapper {
-    margin-top: 30px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #e67e22;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #d35400;
-}
-
-*/
 .social-icons {
   margin-top: 10px;
   text-align: center;
@@ -2404,85 +2039,108 @@ footer {
 @media screen and (max-width: 768px) {
     /* Hide both icons by default */
     .fa-bars, .fa-xmark {
-        display: none;
-        z-index: 1001;
-        font-size: 28px;
-        cursor: pointer;
-        margin-top: 15px;
-    }
-    
-    /* Show only the bars icon when menu is closed */
-    .menu-closed .fa-bars {
-        display: block;
-    }
-    
-    /* Show only the xmark icon when menu is open */
-    .menu-open .fa-xmark {
-        display: block;
-    }
-    
-    #sidemenu {
-        position: fixed;
-        top: 80px;
-        left: -270px;
-        width: 250px;
-        height: calc(100vh - 70px);
-        background-color: #eff8b8d3;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-        transition: left 0.3s ease;
-        z-index: 1000;
-        border-radius: 0 8px 8px 0;
-        gap: 15px;
-       
-    }
-    .logo {
-      margin-top:55px;
+      display: none;
+      z-index: 1001;
+      font-size: 28px;
+      cursor: pointer;
+      margin-top: 15px;
+  }
+  
+  /* Show only the bars icon when menu is closed */
+  .menu-closed .fa-bars {
+      display: block;
+  }
+  
+  /* Show only the xmark icon when menu is open */
+  .menu-open .fa-xmark {
+      display: block;
+  }
+  
+  #sidemenu {
+      position: fixed;
+      top: 80px;
+      left: -325px; /* Adjusted to match new width (350px + 20px padding) */
+      width: 325px; /* Increased from 300px to 350px for longer text */
+      height: calc(100vh - 70px);
+      background-color: #ffffffec;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      transition: left 0.5s ease;
+      z-index: 1000;
+      border-radius: 0 8px 8px 0;
+      gap: 15px;
+      display: flex;
+      overflow-y: auto;
+      
+  }
+  
+  #sidemenu.active {
+      left: 0;
+  }
+  
+  #sidemenu li {
+      list-style: none;
+      width: 100%; /* Full width for li */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Full-width shadow */
+      border-radius: 4px;
+      margin-bottom: 8px;
+      padding: 0; /* Ensure shadow spans full width */
+  }
+  
+  #sidemenu li a {
+      padding: 12px 20px; /* Increased left padding for clear left alignment */
+      display: block;
+      color: #333;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid #dfdfdf;
+      text-align: left; /* Explicitly left-align text */
+      transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  #sidemenu li a:hover {
+      background-color: #aaaaa8;
+      color: #1a1a1a;
+      border-radius: 4px;
+  }
+  
+  #sidemenu li:last-child {
+      margin-bottom: 0; /* Remove gap for last item */
+  }
+  
+  #sidemenu li:last-child a {
+      border-bottom: none;
+  }
+  
+  /* Keep navbar and logo unchanged */
+  .navbar {
+      padding: 10px 15px;
+      position: relative;
+      z-index: 1002;
+  }
+  
+  .logo {
+      margin-top: 55px;
       margin-left: 130px;
-    }
-    #sidemenu.active {
-        left: 0;
-    }
-    
-    #sidemenu li a {
-        padding: 8px 0;
-        display: block;
-        border-bottom: 1px solid #f0f0f0; /* Separator between items */
-    }
-    #sidemenu li a {
-    
-    white-space: nowrap; /* Keep text on one line */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Show ... for overflow */
-    display: block;
-    max-width: 100%;
-}
-    #sidemenu li:last-child a {
-        border-bottom: none; /* Remove border from last item */
-    }
-    
-    .navbar {
-        padding: 10px 15px;
-        position: relative;
-        z-index: 1002; /* Ensure navbar stays above menu */
-        
-    }
- /* Optional: Add backdrop effect when menu is open */
-    .menu-backdrop {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.3);
-        z-index: 999;
-        display: none;
-    }
-    
-    .menu-backdrop.active {
-        display: block;
-    }
+  }
+  
+  /* Keep backdrop unchanged */
+  .menu-backdrop {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 999;
+      display: none;
+  }
+  
+  .menu-backdrop.active {
+      display: block;
+  }
 
 
     /*Tours width*/

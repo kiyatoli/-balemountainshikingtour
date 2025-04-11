@@ -28,6 +28,7 @@
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="style.css">
       <script src="nav.js"></script>
+     
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -49,11 +50,15 @@
         </nav>
         </div>
       </header>
-      <video id="headerVideo" autoplay loop muted playsinline>
-        <source src="video/background1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    
+      <div class="video-container">
+        <video id="headerVideo" autoplay loop muted playsinline>
+          <source src="video/background1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="images/logo/logog.png"Overlay Image" class="overlay-image">
+      </div>
+      
+      
         <section id="hero-text">
             <h1>Bale Mountains Hiking Tours</h1>
            <div class="hero-par">
@@ -139,9 +144,9 @@
           <div class="col">
             <h3>Attractions</h3>
             <ul>
-              <li><a href="#">Bale Mountains National Park</a></li>
-              <li><a href="#">Ethiopian Wolf</a></li>
-              <li><a href="#">The sof Omor cave </a></li>
+              <li><a href="https://balemountains.org/" target="_blank" >Bale Mountains National Park</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Sof_Omar_Caves" target="_blank">Ethiopian Wolf</a></li>
+              <li><a href="https://www.ethiopianwolf.org/" target="_blank">The sof Omor cave </a></li>
             </ul>
           </div>
           <div class="col">
@@ -174,6 +179,83 @@
       </div>
           
     </footer>
+    <script>
+      document.getElementById("emailForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        
+        const form = e.target;
+        const messageBox = document.getElementById("messageBox");
+        const email = document.getElementById("userEmail").value.trim();
+        
+        // Clear previous messages
+        messageBox.textContent = "";
+        messageBox.style.display = "none";
+        
+        // Client-side validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          messageBox.textContent = "Please enter a valid email address";
+          messageBox.style.display = "block";
+          messageBox.style.color = "red";
+          return;
+        }
+        
+        try {
+          // Show loading state
+          const submitBtn = form.querySelector("button");
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Sending...";
+          
+          // Send data to Google Apps Script
+          const response = await fetch(
+            "https://script.google.com/macros/s/AKfycbxpTAvD6MgXpf57MMVgyjT2GtUw28ctmM0F6tVrtI2IeduvWQzSd9EOPZlDsGqy8CwZVw/exec",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email }),
+              // Ensure CORS compatibility
+              mode: "cors",
+              // Prevent caching
+              cache: "no-cache"
+            }
+          );
+          
+          // Check HTTP status
+          if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
+          }
+          
+          const result = await response.json();
+          
+          // Show result
+          messageBox.textContent = result.message;
+          messageBox.style.display = "block";
+          messageBox.style.color = result.status === "success" ? "green" : "red";
+          
+          if (result.status === "success") {
+            form.reset();
+          }
+          
+        } catch (error) {
+          // Specific error messages
+          let errorMessage = "Failed to submit. Please try again.";
+          if (error.message.includes("NetworkError") || error.message.includes("Failed to fetch")) {
+            errorMessage = "Network error. Please check your connection.";
+          } else if (error.message.includes("HTTP error")) {
+            errorMessage = "Server error. Please try again later.";
+          }
+          messageBox.textContent = errorMessage;
+          messageBox.style.display = "block";
+          messageBox.style.color = "red";
+          console.error("Error:", error);
+        } finally {
+          // Reset button
+          const submitBtn = form.querySelector("button");
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit";
+        }
+      });
+    </script>
         <script>
           const places = [
               {
